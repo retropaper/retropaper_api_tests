@@ -160,13 +160,11 @@ spec:
 			def commit_message = sh(returnStdout: true, script: "git log -n 1 ${gitCommit} | tail -1")
 			currentBuild.description = commit_message
 
-			container('mavenjdk') {
+			container('ruby') {
 				sh """
                     echo "BUILD_URL=${buildUrl}"
                     echo "GIT_COMMIT=${gitCommit}"
                     echo "SHORT_GIT_COMMIT=${shortGitCommit}"
-                    java -version
-                    mvn -v
                 """
 			}
 
