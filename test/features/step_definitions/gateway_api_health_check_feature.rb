@@ -18,10 +18,10 @@ require 'rspec'
 Given(/^"([^"]*)" service endpoint: "([^"]*)" is called$/) do |arg1, arg2|
   @build_endpoint = ''
   case arg1
-  when "BDSO_GATEWAY_API"
+  when "APPLICANT_API"
     case arg2
       when "HEALTH"
-        @build_endpoint = "#{ENV['GATEWAY_HOSTNAME']}/#{ENV['HEALTH']}"
+        @build_endpoint = "#{ENV['BDSO_APPLICANT_API']}/#{ENV['HEALTH']}"
       else
         raise "Unable to find endpoint method. Please check your feature scenario and make sure endpoint method is correct: #{arg2}"
     end

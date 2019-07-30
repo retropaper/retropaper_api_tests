@@ -1,19 +1,21 @@
 #env_local
-ENV['TIER'] = "local"
+ENV['TIER'] = "server"
 
 
 case ENV['TIER']
 when "local"
-  ENV['GATEWAY_HOSTNAME'] = "http://localhost:8090"
+  ENV['SERVER_HOSTNAME'] = "http://localhost:8090"
   ENV['API'] = "api"
-when "aws"
-  ENV['GATEWAY_HOSTNAME'] = "http://aws_url"
+  ENV['APPLICANT_HOSTNAME'] = "applicant"
+when "server"
+  ENV['SERVER_HOSTNAME'] = "https://gateway.jets-biometrics.sevatecdemo.com"
   ENV['API'] = "api"
+  ENV['APPLICANT_HOSTNAME'] = "applicant"
 else
   raise "Current env tier has been set to: [ #{ENV['TIER']} ], please check your env tier"
 end
 
-ENV['BDSO_GATEWAY'] = "#{ENV['GATEWAY_HOSTNAME']}/#{ENV['API']}"
+ENV['BDSO_APPLICANT_API'] = "#{ENV['SERVER_HOSTNAME']}/#{ENV['API']}/#{ENV['APPLICANT_HOSTNAME']}"
 ENV['HEALTH'] = "health"
 ENV['USERS'] = "users"
 ENV['SINGLE_USER'] = "userid"
