@@ -113,7 +113,7 @@ spec:
       - name: docker-sock-volume
         mountPath: /var/run/docker.sock
   - name: ruby
-    image: ruby:2.3.7
+    image: antonyh/cucumber
     imagePullPolicy: Always
     command:
     - cat
