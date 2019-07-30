@@ -1,0 +1,10 @@
+{
+  "authentication_failure":
+  {
+    "msg": "Authentication Failure: \"Login failed due to an invalid username or password.\""
+  },
+  "expired_token":
+  {
+    "msg": "You do not have permission to view this page."
+  }
+}
