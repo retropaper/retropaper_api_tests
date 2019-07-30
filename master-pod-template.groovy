@@ -176,7 +176,6 @@ spec:
 				container('ruby') {
 					sh """
 					    cd test
-                        cucumber
                     """
 				}
 				output('Compile', 'success')
