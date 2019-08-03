@@ -5,7 +5,8 @@ import sevatec.GithubStatus;
 
 def worker_label = "worker-${UUID.randomUUID().toString()}"
 
-@Field String orgName = 'sevatec'
+@Field String orgName = 'SevatecInc'
+@Field String repoName = 'bdso_bdd_api'
 @Field String gitCommit = null
 def shortGitCommit = null
 def containerImage  = "jets-biometrics/bdso-bdd-api"
@@ -37,6 +38,7 @@ def makeStatus(String stage, String status) {
 		githubStatus.setGitCommit(gitCommit)
 		githubStatus.setBuildUrl(buildUrl)
 		githubStatus.createStatus()
+		githubStatus.setRepoName(repoName)
 		githubStatus.setServiceUser('tics-bot')
 	}
 }
