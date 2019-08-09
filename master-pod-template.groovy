@@ -205,6 +205,16 @@ spec:
 			}
 			catch(err) {
 				output('Run Test APIs', 'failure')
+				
+				cucumber buildStatus: 'UNSTABLE',
+                fileIncludePattern: 'results/results_api_output.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'API',
+                        'value': 'Applicant'
+                    ]
+                ]
 				throw err
 			}
 		}
