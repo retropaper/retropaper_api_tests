@@ -177,10 +177,9 @@ spec:
 			try {
 				container('ruby') {
 					sh """
-					    sudo bundle install
+					    bundle install
 					    cd test
 						cucumber --i18n help
-						cd ..
                     """
 				}
 				output('Compile', 'success')
