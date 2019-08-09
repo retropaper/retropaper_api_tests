@@ -198,7 +198,7 @@ spec:
 				container('ruby') {
 					sh """
                         cd test
-						cucumber -t @HIGH
+						cucumber features/ -t @HIGH --format json --out ../results/results_api_output.json --expand -f pretty
                     """
 				}
 				output('Run Test APIs', 'success')
