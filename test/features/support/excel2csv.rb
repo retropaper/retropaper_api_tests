@@ -2,7 +2,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'roo'
+# require 'roo'
 require 'csv'
 
 USAGE = <<END
