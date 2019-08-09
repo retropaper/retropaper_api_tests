@@ -37,8 +37,8 @@ def makeStatus(String stage, String status) {
 		githubStatus.setOrgName(orgName)
 		githubStatus.setGitCommit(gitCommit)
 		githubStatus.setBuildUrl(buildUrl)
-		githubStatus.createStatus()
 		githubStatus.setRepoName(repoName)
+		githubStatus.createStatus()
 		githubStatus.setServiceUser('tics-bot')
 	}
 }
@@ -202,25 +202,25 @@ spec:
                     """
 				}
 				output('Run Test APIs', 'success')
-				publishHTML (target: [
-					allowMissing: false,
-					alwaysLinkToLastBuild: false,
-					keepAll: true,
-					reportDir: 'target/surefire-reports',
-					reportFiles: 'index.html',
-					reportName: "API test cases report"
-				])
+				// publishHTML (target: [
+				// 	allowMissing: false,
+				// 	alwaysLinkToLastBuild: false,
+				// 	keepAll: true,
+				// 	reportDir: 'target/surefire-reports',
+				// 	reportFiles: 'index.html',
+				// 	reportName: "API test cases report"
+				// ])
 			}
 			catch(err) {
 				output('Run Test APIs', 'failure')
-				publishHTML (target: [
-					allowMissing: false,
-					alwaysLinkToLastBuild: false,
-					keepAll: true,
-					reportDir: 'target/surefire-reports',
-					reportFiles: 'index.html',
-					reportName: "API test cases report"
-				])
+				// publishHTML (target: [
+				// 	allowMissing: false,
+				// 	alwaysLinkToLastBuild: false,
+				// 	keepAll: true,
+				// 	reportDir: 'target/surefire-reports',
+				// 	reportFiles: 'index.html',
+				// 	reportName: "API test cases report"
+				// ])
 				throw err
 			}
 		}

@@ -37,8 +37,8 @@ def makeStatus(String stage, String status) {
 		githubStatus.setOrgName(orgName)
 		githubStatus.setGitCommit(gitCommit)
 		githubStatus.setBuildUrl(buildUrl)
-		githubStatus.createStatus()
 		githubStatus.setRepoName(repoName)
+		githubStatus.createStatus()
 		githubStatus.setServiceUser('tics-bot')
 	}
 }
@@ -115,7 +115,7 @@ spec:
       - name: docker-sock-volume
         mountPath: /var/run/docker.sock
   - name: ruby
-    image: antonyh/cucumber
+    image: ruby:2.3.7
     imagePullPolicy: Always
     command:
     - cat
@@ -177,7 +177,11 @@ spec:
 			try {
 				container('ruby') {
 					sh """
+					    ruby -v
+					    bundle install
+						cucumber --version
 					    cd test
+						cucumber --i18n help
                     """
 				}
 				output('Compile', 'success')
@@ -194,29 +198,29 @@ spec:
 				container('ruby') {
 					sh """
                         cd test
-						cucumber -t @ghc1
+						cucumber -t @HIGH
                     """
 				}
 				output('Run Test APIs', 'success')
-				publishHTML (target: [
-					allowMissing: false,
-					alwaysLinkToLastBuild: false,
-					keepAll: true,
-					reportDir: 'target/surefire-reports',
-					reportFiles: 'index.html',
-					reportName: "API test cases report"
-				])
+				// publishHTML (target: [
+				// 	allowMissing: false,
+				// 	alwaysLinkToLastBuild: false,
+				// 	keepAll: true,
+				// 	reportDir: 'target/surefire-reports',
+				// 	reportFiles: 'index.html',
+				// 	reportName: "API test cases report"
+				// ])
 			}
 			catch(err) {
 				output('Run Test APIs', 'failure')
-				publishHTML (target: [
-					allowMissing: false,
-					alwaysLinkToLastBuild: false,
-					keepAll: true,
-					reportDir: 'target/surefire-reports',
-					reportFiles: 'index.html',
-					reportName: "API test cases report"
-				])
+				// publishHTML (target: [
+				// 	allowMissing: false,
+				// 	alwaysLinkToLastBuild: false,
+				// 	keepAll: true,
+				// 	reportDir: 'target/surefire-reports',
+				// 	reportFiles: 'index.html',
+				// 	reportName: "API test cases report"
+				// ])
 				throw err
 			}
 		}
