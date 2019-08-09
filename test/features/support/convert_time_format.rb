@@ -1,6 +1,6 @@
 require 'rspec'
 require 'json'
-require 'json-schema'
+# require 'json-schema'
 require 'time'
 
 def convert_time time_string, time_format

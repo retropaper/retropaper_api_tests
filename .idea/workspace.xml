@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6eaddbe-99dc-4b63-82aa-6f1bc3b92ef1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/api/bdso_user_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/bdso_user_search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/support/env_int.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/support/env_int.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/support/env_local.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/support/env_local.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/support/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/support/environment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/support/convert_time_format.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/support/convert_time_format.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bdd_reporter/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/api/bdso_user_search.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="63" lean-forward="true" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+            <state relative-caret-position="390">
+              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/features/support/convert_time_format.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/public/resources/data/all_users.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1215">
+              <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -127,6 +140,8 @@
         <option value="$PROJECT_DIR$/test/features/support/environment.rb" />
         <option value="$PROJECT_DIR$/test/features/api/bdso_user_search.feature" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" />
+        <option value="$PROJECT_DIR$/test/public/resources/data/all_users.json" />
+        <option value="$PROJECT_DIR$/test/features/support/convert_time_format.rb" />
       </list>
     </option>
   </component>
@@ -194,6 +209,27 @@
               <item name="support" type="462c0819:PsiDirectoryNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -210,6 +246,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/public/resources/data" />
       <recent name="$PROJECT_DIR$/test/features/step_definitions" />
       <recent name="$PROJECT_DIR$/test/features/api" />
     </key>
@@ -282,12 +319,12 @@
       <updated>1563293265607</updated>
       <workItem from="1563293268496" duration="14298000" />
       <workItem from="1564491656642" duration="6970000" />
-      <workItem from="1565358683024" duration="2631000" />
+      <workItem from="1565358683024" duration="2976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23899000" />
+    <option name="totallyTimeSpent" value="24244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,7 +337,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="986" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21184371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -427,9 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/support/convert_time_format.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/env_stage.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -530,6 +563,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/public/resources/data/all_users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
@@ -539,8 +579,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/api/bdso_user_search.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="63" lean-forward="true" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+        <state relative-caret-position="390">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/support/convert_time_format.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
