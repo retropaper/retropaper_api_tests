@@ -177,6 +177,8 @@ spec:
 			try {
 				container('ruby') {
 					sh """
+					    ruby -v
+						cucumber -v
 					    bundle install
 					    cd test
 						cucumber --i18n help
