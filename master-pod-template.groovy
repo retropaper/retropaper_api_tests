@@ -115,7 +115,7 @@ spec:
       - name: docker-sock-volume
         mountPath: /var/run/docker.sock
   - name: ruby
-    image: circleci/ruby:latest
+    image: ruby
     imagePullPolicy: Always
     command:
     - cat
