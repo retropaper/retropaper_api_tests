@@ -1,7 +1,7 @@
 @GATEWAY_HEALTH_CHECK
 Feature: BDSO Gateway API Service Helath Check
 
-  @HIGH @HIGH_GATEWAY @ghc1
+  @HIGH_hold @HIGH_GATEWAY_hold @ghc1
   Scenario: GATEWAY API service health check
     Given "APPLICANT_API" service endpoint: "HEALTH" is called
     And service status code should return "200"
