@@ -1,11 +1,19 @@
-Feature: BDSO API: User Search
+@BIOMETRICS_APPLICANT_API
+Feature: BDSO(APPLICANT) API: User Search
 
-  @HIGH @us1
-  Scenario Outline: #001 Ensure BDSO GATEWAY API return single user details by user ID
-    Given "BDSO_GATEWAY" api service endpoint is called with "USERS" endpoint and "<user_id>" parameter
+  @HIGH @HIGH_GATEWAY @us1
+  Scenario: #001 Ensure BDSO GATEWAY API return single all user details
+    Given "APPLICANT_API" service endpoint: "USERS" is called with "all" parameter
     And service status code should return "200"
     And the response body should not be null
-    Then "BDSO_GATEWAY" api service should return following users details
+    Then "APPLICANT_API" service should return all user details
+
+  @HIGH_hold @HIGH_GATEWAY_hold @us2
+  Scenario Outline: #002 Ensure BDSO GATEWAY API return single user details by user ID
+    Given "APPLICANT_API" api service endpoint is called with "USERS" endpoint and "<user_id>" parameter
+    And service status code should return "200"
+    And the response body should not be null
+    Then "APPLICANT_API" api service should return following users details
       | id               | 1              |
       | createdBy        | Temp Test      |
       | createdDate      | 1562943215.703 |
@@ -18,46 +26,3 @@ Feature: BDSO API: User Search
     Examples:
       | user_id |
       | jdoe    |
-
-
-
-
-
-#  getUserByUserId
-#
-#  localhost:8090/api/users/userid
-
-
-
-
-
-#
-#  {
-#  "id": 1,
-#  "createdBy": "Temp Test",
-#  "createdDate": 1562943215.703,
-#  "lastModifiedBy": "Temp Test",
-#  "lastModifiedDate": 1562943215.703,
-#  "firstName": "John",
-#  "lastName": "Doe",
-#  "dob": "12/32/1989",
-#  "userId": "jdoe"
-#  }
-
-
-
-#  switch out userId with the specific id.  Right now returns a default test user
-#
-#  getAllUsers
-#
-#  localhost:8090/api/users/all
-#
-#  returns a list of all users.  Right now returns a list of test users
-#
-#
-#
-#  getUser
-#
-#  localhost:8090/api/users/me
-#
-#  returns the current logged in user.  Right now returns a default test user

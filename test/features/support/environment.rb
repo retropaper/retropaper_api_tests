@@ -1,5 +1,5 @@
 module Environment
-  @tier = "local"
+  @tier = "server"
 
   def self.getTier
     return @tier
