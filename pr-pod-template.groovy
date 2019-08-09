@@ -202,28 +202,25 @@ spec:
                     """
 				}
 				output('Run Test APIs', 'success')
-				// publishHTML (target: [
-				// 	allowMissing: false,
-				// 	alwaysLinkToLastBuild: false,
-				// 	keepAll: true,
-				// 	reportDir: 'target/surefire-reports',
-				// 	reportFiles: 'index.html',
-				// 	reportName: "API test cases report"
-				// ])
 			}
 			catch(err) {
 				output('Run Test APIs', 'failure')
-				// publishHTML (target: [
-				// 	allowMissing: false,
-				// 	alwaysLinkToLastBuild: false,
-				// 	keepAll: true,
-				// 	reportDir: 'target/surefire-reports',
-				// 	reportFiles: 'index.html',
-				// 	reportName: "API test cases report"
-				// ])
 				throw err
 			}
 		}
+
+		stage('Generate Cucumber Report') {
+        cucumber buildStatus: 'UNSTABLE',
+                fileIncludePattern: 'results/results_api_output.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'API',
+                        'value': 'Applicant'
+                    ]
+                ]
+    }
+
 	}
 }
 
