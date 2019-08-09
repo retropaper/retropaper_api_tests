@@ -195,7 +195,7 @@ spec:
 				container('ruby') {
 					sh """
                         cd test
-						cucumber -t @ghc1
+						cucumber -t @HIGH
                     """
 				}
 				output('Run Test APIs', 'success')
