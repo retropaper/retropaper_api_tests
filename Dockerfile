@@ -27,7 +27,7 @@ WORKDIR /data
 
 ADD . /data
 # add the requirements to the gem install line instead, otherwise it runs bundler every single change
-RUN bundle install
+RUN cd /data && bundle install
 
 #CMD ["cucumber"]
 

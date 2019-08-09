@@ -115,7 +115,7 @@ spec:
       - name: docker-sock-volume
         mountPath: /var/run/docker.sock
   - name: ruby
-    image: antonyh/cucumber
+    image: ruby:2.3.7
     imagePullPolicy: Always
     command:
     - cat
@@ -177,10 +177,11 @@ spec:
 			try {
 				container('ruby') {
 					sh """
-					    sudo bundle install
+					    ruby -v
+					    bundle install
+						cucumber --version
 					    cd test
 						cucumber --i18n help
-						cd ..
                     """
 				}
 				output('Compile', 'success')
