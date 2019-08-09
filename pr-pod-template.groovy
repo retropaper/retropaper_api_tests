@@ -151,7 +151,7 @@ spec:
 		stage('Prepare') {
 			scmInfo = checkout scm
 			echo "scm : ${scmInfo}"
-			gitCommit = scmInfo.GIT_COMMIT
+			gitCommit = ghprbActualCommit
 			shortGitCommit = gitCommit[0..10]
 			previousGitCommit = scmInfo.GIT_PREVIOUS_COMMIT
 			buildUrl = env.BUILD_URL
