@@ -185,9 +185,27 @@ spec:
                     """
 				}
 				output('Compile', 'success')
+				cucumber buildStatus: 'UNSTABLE',
+                fileIncludePattern: 'results/results_api_output.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'API',
+                        'value': 'Applicant'
+                    ]
+                ]
 			}
 			catch(err) {
 				output('Compile', 'failure')
+				cucumber buildStatus: 'UNSTABLE',
+                fileIncludePattern: 'results/results_api_output.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'API',
+                        'value': 'Applicant'
+                    ]
+                ]
 				throw err
 			}
 		}
@@ -208,19 +226,6 @@ spec:
 				throw err
 			}
 		}
-
-		stage('Generate Cucumber Report') {
-        cucumber buildStatus: 'UNSTABLE',
-                fileIncludePattern: 'results/results_api_output.json',
-                trendsLimit: 10,
-                classifications: [
-                    [
-                        'key': 'API',
-                        'value': 'Applicant'
-                    ]
-                ]
-    }
-
 	}
 }
 
