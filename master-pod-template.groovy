@@ -224,6 +224,18 @@ spec:
 				throw err
 			}
 		}
+
+		stage('Generate HTML report') {
+        cucumber buildStatus: 'UNSTABLE',
+                fileIncludePattern: 'results/results_api_output.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'Browser',
+                        'value': 'Firefox'
+                    ]
+                ]
+    }
 	}
 }
 
