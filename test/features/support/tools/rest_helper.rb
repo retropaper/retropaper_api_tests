@@ -4,7 +4,7 @@ require 'rest-client'
 require_relative 'bdd_utilities'
 require_relative 'bdd_logger'
 require 'jwt'
-require_relative '../../../../Test/features/support/env_int'
+require_relative '../../../../test/features/support/env_int'
 
 class RestHelper
 
