@@ -115,7 +115,7 @@ spec:
       - name: docker-sock-volume
         mountPath: /var/run/docker.sock
   - name: ruby
-    image: antonyh/cucumber
+    image: shashikant86/docker-bdd
     imagePullPolicy: Always
     command:
     - cat
