@@ -53,7 +53,7 @@ end
 Then(/^"([^"]*)" service should return all user details$/) do |arg1|
   case arg1
   when "APPLICANT_API"
-    p@response
+    puts @response
 
   else
     raise "Expected service method dose not exists. Please check your feature scenarios"
