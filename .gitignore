@@ -1,3 +1,4 @@
 
 # Ignore results dir
 /results
+Gemfile.lock
