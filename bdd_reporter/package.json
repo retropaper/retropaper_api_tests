@@ -1,21 +1,21 @@
 {
   "name": "bdd_reporter",
   "version": "1.0.0",
-  "description": "BDD report convertor",
+  "description": "Retropaper report convertor",
   "main": "generate_report.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sevatecinc/bdso_api_bdd_tests.git"
+    "url": "git+https://github.com/retropaper/retropaper_api_tests.git"
   },
   "author": "Shamim Ahmed",
   "license": "Sevatec",
   "bugs": {
-    "url": "https://github.com/sevatecinc/bdso_api_bdd_tests/issues"
+    "url": "https://github.com/retropaper/retropaper_api_tests/issues"
   },
-  "homepage": "https://github.com/sevatecinc/bdso_api_bdd_tests.git",
+  "homepage": "https://github.com/retropaper/retropaper_api_tests.git",
   "devDependencies": {},
   "dependencies": {
     "cucumber-html-reporter": "0.2.16"

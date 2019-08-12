@@ -2,23 +2,27 @@ require_relative '../support/helper_methods'
 require 'json'
 require 'rspec'
 
-
 Given(/^"([^"]*)" service endpoint: "([^"]*)" is called with "([^"]*)" parameter$/) do |arg1, arg2, arg3|
   @build_endpoint = ''
   case arg1
-  when "APPLICANT_API"
+  when "PERSON_API"
     case arg2
       when "HEALTH"
-        @build_endpoint = "#{ENV['BDSO_APPLICANT_API']}/#{ENV['HEALTH']}"
-      when "USERS"
-        @build_endpoint = "#{ENV['BDSO_APPLICANT_API']}/#{ENV['ALL_USER']}"
+        @build_endpoint = "#{ENV['RETROPAPER_PERSON_API']}/#{ENV['HEALTH']}"
+      when "PERSON"
+        @build_endpoint = "#{ENV['RETROPAPER_PERSON_API']}/#{ENV['ALL_USER']}"
       else
         raise "Unable to find endpoint method. Please check your feature scenario and make sure endpoint method is correct: #{arg2}"
     end
-  when "bdso-analytics"
-  #   place holder
-  when "bdso-biometrics"
-    #   place holder
+  when "MOVIE_API"
+    case arg2
+      when "HEALTH"
+        @build_endpoint = "#{ENV['RETROPAPER_MOVIE_API']}/#{ENV['HEALTH']}"
+      when "MOVIE"
+        @build_endpoint = "#{ENV['RETROPAPER_MOVIE_API']}/#{ENV['ALL_MOVIE']}"
+      else
+        raise "Unable to find endpoint method. Please check your feature scenario and make sure endpoint method is correct: #{arg2}"
+    end
   else
     raise "Unable to match API: #{arg1} condition in your feature scenario, please check your feature"
   end
@@ -52,7 +56,17 @@ end
 
 Then(/^"([^"]*)" service should return all user details$/) do |arg1|
   case arg1
-  when "APPLICANT_API"
+  when "PERSON_API"
+    puts @response
+
+  else
+    raise "Expected service method dose not exists. Please check your feature scenarios"
+  end
+end
+
+Then(/^"([^"]*)" service should return all movie details$/) do |arg1|
+  case arg1
+  when "MOVIE_API"
     puts @response
 
   else

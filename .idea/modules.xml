@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bdso_api_bdd_tests.iml" filepath="$PROJECT_DIR$/.idea/bdso_api_bdd_tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/retropaper_api_tests.iml" filepath="$PROJECT_DIR$/.idea/retropaper_api_tests.iml" />
     </modules>
   </component>
 </project>

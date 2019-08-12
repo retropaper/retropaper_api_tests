@@ -14,7 +14,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/api/bdso_user_search.feature">
+        <entry file="file://$PROJECT_DIR$/test/features/api/retropaper_person_search.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/features/api/retropaper_movie_search.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
@@ -27,15 +36,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -153,12 +153,12 @@
         <option value="$PROJECT_DIR$/test/features/support/tools/rest_helper.rb" />
         <option value="$PROJECT_DIR$/test/features/support/helper_methods.rb" />
         <option value="$PROJECT_DIR$/test/features/api/gateway_api_health_check.feature" />
-        <option value="$PROJECT_DIR$/readme" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/master-pod-template.groovy" />
         <option value="$PROJECT_DIR$/pr-pod-template.groovy" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" />
-        <option value="$PROJECT_DIR$/test/features/api/bdso_user_search.feature" />
+        <option value="$PROJECT_DIR$/test/features/api/retropaper_person_search.feature" />
+        <option value="$PROJECT_DIR$/test/features/api/retropaper_movie_search.feature" />
       </list>
     </option>
   </component>
@@ -178,47 +178,47 @@
         <subPane>
           <expand>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="ResultsUpload" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="export" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bdso_api_bdd_tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bdso_api_bdd_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -263,7 +263,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Scenario: User Search" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
-      <module name="bdso_api_bdd_tests" />
+      <module name="retropaper_api_tests" />
       <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test" />
@@ -283,7 +283,8 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/bdso_user_search.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/retropaper_person_search.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/retropaper_movie_search.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^User Search$" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
@@ -589,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -603,7 +597,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/api/bdso_user_search.feature">
+    <entry file="file://$PROJECT_DIR$/test/features/api/retropaper_person_search.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/api/retropaper_movie_search.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
