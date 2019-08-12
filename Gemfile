@@ -1,0 +1,26 @@
+# frozen_string_literal: true
+source "https://rubygems.org"
+
+
+#gem 'mime-types', '~> 1.23'
+gem 'cucumber', '2.0.0'
+gem 'rspec'
+gem 'json', '1.8.3'
+gem 'rest-client'
+gem 'activesupport'
+gem 'hashdiff'
+gem 'logger'
+gem 'json-schema'
+gem 'selenium-webdriver', '2.53.4'
+# gem 'pg', '0.21.0'
+gem 'json-diff'
+gem 'json-compare'
+gem 'jwt'
+gem 'parallel_tests'
+# gem 'creek'
+gem 'nokogiri'
+gem 'spreadsheet'
+gem 'yomu'
+gem 'roo'
+gem 'write_xlsx'
+gem 'roo-xls'
