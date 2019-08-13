@@ -5,20 +5,20 @@ import sevatec.GithubStatus;
 
 def worker_label = "worker-${UUID.randomUUID().toString()}"
 
-@Field String orgName = 'SevatecInc'
-@Field String repoName = 'bdso_bdd_api'
+@Field String orgName = 'retropaper'
+@Field String repoName = 'retropaper_api_tests'
 @Field String gitCommit = null
 def shortGitCommit = null
-def containerImage  = "jets-biometrics/bdso-bdd-api"
+def containerImage  = "jets-records/retropaper_api_tests"
 def previousGitCommit = null
 @Field String buildUrl = null
 def containerTag = null
 @Field String gitUrl = null
 @Field String ghprbPullTitle = ''
-@Field String slackUrl = "https://teamsevatec-uscisbdso.slack.com/services/hooks/jenkins-ci"
-@Field String slackToken = "bdso-slack-token"
+@Field String slackUrl = "https://teamsevatec-uscisrdso.slack.com/services/hooks/jenkins-ci"
+@Field String slackToken = "rdso-slack-token"
 @Field String slackChannel = '#jenkins-notifications'
-@Field String slackdomain = "teamsevatec-uscisbdso"
+@Field String slackdomain = "teamsevatec-uscisrdso"
 
 def makeStatus(String stage, String status) {
 
@@ -72,11 +72,11 @@ def output(String stage, String status) {
 		makeStatus(stage, status)
 		println "***========= STATUS MADE ${status} : ${stage} =======***"
 		if (status == 'failure'){
-			slackMessage = "BDSO-API-TestCases PR: Build ${env.BUILD_ID} ${status} during ${stage}. See ${env.BUILD_URL}"
+			slackMessage = "retropaper-api-tests PR: Build ${env.BUILD_ID} ${status} during ${stage}. See ${env.BUILD_URL}"
 			//makeIssue(stage)
 		}
 		else {
-			slackMessage = "BDSO-API-TestCases PR: Build ${env.BUILD_ID} ${status} during ${stage}."
+			slackMessage = "retropaper-api-tests PR: Build ${env.BUILD_ID} ${status} during ${stage}."
 		}
 
 		slackSend baseUrl: slackUrl, teamDomain: slackdomain, tokenCredentialId: slackToken, channel: slackChannel, color: slackColor, message: slackMessage
@@ -91,7 +91,7 @@ podTemplate(
 		label: worker_label, yaml: """
 kind: Pod
 metadata:
-  name: bdso-bdd-api-pr-build
+  name: retropaper-api-tests-pr-build
 spec:
   containers:
   - name: kaniko
@@ -131,7 +131,7 @@ spec:
     projected:
       sources:
       - secret:
-          name: gcr-jets-biometrics-dockercfg
+          name: gcr-jets-records-dockercfg
           items:
             - key: .dockerconfigjson
               path: config.json
