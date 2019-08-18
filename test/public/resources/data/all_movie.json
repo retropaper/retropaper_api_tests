@@ -1,0 +1,57 @@
+{
+  "id": "tt0000008",
+  "title": "Edison Kinetoscopic Record of a Sneeze (1894)",
+  "releaseYear": 1894,
+  "genres": [
+    {
+      "genreId": "1",
+      "movieId": "tt0000008",
+      "genre": "Documentary"
+    },
+    {
+      "genreId": "2",
+      "movieId": "tt0000008",
+      "genre": "Short"
+    }
+  ],
+  "people": [
+    {
+      "moviePrimaryPeopleId": {
+        "movieId": "tt0000008",
+        "personId": "nm0000168"
+      },
+      "personType": "actor"
+    },
+    {
+      "moviePrimaryPeopleId": {
+        "movieId": "tt0000008",
+        "personId": "nm0000169"
+      },
+      "personType": "actor"
+    }
+  ],
+  "reviews": [
+    {
+      "reviewId": 1,
+      "authorName": "Keonte Davis",
+      "dateCreated": 1565661207.000000000,
+      "name": "Test Review",
+      "reviewConent": "Some sample data to test content",
+      "reviewRating": 3,
+      "minReviewScale": 1,
+      "maxReviewScale": 5,
+      "movieId": "tt0000008"
+    },
+    {
+      "reviewId": 2,
+      "authorName": "Keonte Davis",
+      "dateCreated": 1565661207.000000000,
+      "name": "Test Review",
+      "reviewConent": "Some sample data to test content",
+      "reviewRating": 3,
+      "minReviewScale": 1,
+      "maxReviewScale": 5,
+      "movieId": "tt0000008"
+    }
+  ]
+}

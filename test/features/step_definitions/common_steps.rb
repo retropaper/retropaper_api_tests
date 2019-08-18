@@ -1,8 +1,10 @@
 require_relative '../support/helper_methods'
 require 'json'
 require 'rspec'
+require 'uri'
 
-Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)" parameter$/) do |arg1, arg2, arg3, arg4|
+Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)" : "([^"]*)" parameter$/) do |arg1, arg2, arg3, arg4, arg5|
+  p "arg5:#{arg5}"
   @build_endpoint = ''
   case arg2.upcase
 
@@ -13,11 +15,23 @@ Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)"
     when "PERSON"
       case arg4.upcase
         when "PERSON_ALL"
-          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV["#{arg4}"]}"
+          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV["#{arg5}"]}"
+        when "PERSON_ID"
+          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['PARAM_PERSON_ID']}#{arg5}"
+        when "PERSON_NAME"
+          @arg5 = ""
+          arg5.match(/\s/) ? @flag_pn = true : @flag_pn = false
+          p "@flag_pn: #{@flag_pn}"
+          if @flag_pn
+            @arg5 = "#{URI.encode(arg5)}"
+          else
+            @arg5 = "#{arg5}"
+          end
+          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['PARAM_PERSON_NAME']}#{@arg5}"
         when "BAD_REQUEST"
-          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV["#{arg4}"]}"
+          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['BAD_REQUEST']}"
         else
-          raise "Parameter: #{arg4} is incorrect. Please check your feature scenario and correct it"
+          raise "Parameter: #{arg5} is incorrect. Please check your feature scenario and correct it"
       end
 
 
@@ -32,11 +46,11 @@ Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)"
       when "MOVIE"
         case arg4.upcase
           when "MOVIE_ALL"
-            @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV["#{arg4}"]}"
+            @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV["#{arg5}"]}"
           when "BAD_REQUEST"
-            @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV["#{arg4}"]}"
+            @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV["#{arg5}"]}"
           else
-            raise "Parameter: #{arg4} is incorrect. Please check your feature scenario and correct it"
+            raise "Parameter: #{arg5} is incorrect. Please check your feature scenario and correct it"
         end
       else
         raise "Unable to find endpoint method. Please check your feature scenario and make sure endpoint method is correct: #{arg3}"

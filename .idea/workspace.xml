@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6eaddbe-99dc-4b63-82aa-6f1bc3b92ef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/features/support/env.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/features/step_definitions/test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/api/gateway_api_health_check.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/api_health_check/api_health_check.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/api/retropaper_movie_search.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/api/retropaper_person_search.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/features/support/env_int.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/support/env_int.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/public/resources/data/all_users.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/public/resources/data/all_movie.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bdd_reporter/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,17 +25,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="406">
+              <caret line="54" column="54" lean-forward="true" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/features/support/read_json_frm_dir.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/public/resources/data/all_movie.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/features/step_definitions/test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="284" column="43" selection-start-line="284" selection-start-column="4" selection-end-line="284" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="90" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="90" />
+            <state relative-caret-position="948">
+              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1305">
+              <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -43,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/support/env_int.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="35" column="15" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="15" />
+            <state relative-caret-position="342">
+              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -62,53 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/step_definitions/gateway_api.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/support/env.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/api/api_health_check/api_health_check.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/features/support/helper_methods.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="266">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -126,6 +126,7 @@
       <find>strap</find>
       <find>cucumber</find>
       <find>bundle</find>
+      <find>166499</find>
     </findStrings>
     <replaceStrings>
       <replace>user_role</replace>
@@ -160,7 +161,6 @@
         <option value="$PROJECT_DIR$/test/features/support/before.rb" />
         <option value="$PROJECT_DIR$/test/features/support/env_local.rb" />
         <option value="$PROJECT_DIR$/test/features/support/environment.rb" />
-        <option value="$PROJECT_DIR$/test/public/resources/data/all_users.json" />
         <option value="$PROJECT_DIR$/test/features/support/convert_time_format.rb" />
         <option value="$PROJECT_DIR$/test/features/support/excel2csv.rb" />
         <option value="$PROJECT_DIR$/test/features/support/tools/rest_helper.rb" />
@@ -172,20 +172,25 @@
         <option value="$PROJECT_DIR$/test/features/api/retropaper_movie_search.feature" />
         <option value="$PROJECT_DIR$/test/features/api/retropaper_person_search.feature" />
         <option value="$PROJECT_DIR$/test/features/api/api_health_check.feature" />
-        <option value="$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature" />
         <option value="$PROJECT_DIR$/test/features/support/env.rb" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" />
+        <option value="$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature" />
+        <option value="$PROJECT_DIR$/test/public/resources/data/all_movie.json" />
         <option value="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" />
         <option value="$PROJECT_DIR$/test/features/support/env_int.rb" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" />
+        <option value="$PROJECT_DIR$/test/features/step_definitions/test.rb" />
+        <option value="$PROJECT_DIR$/test/public/resources/data/all_users.json" />
+        <option value="$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json" />
         <option value="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" />
+        <option value="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="986" />
+    <option name="width" value="800" />
+    <option name="height" value="541" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -307,18 +312,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/features/support" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/features/step_definitions" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/features/step_definitions" />
+      <recent name="$PROJECT_DIR$/test/public/resources/data" />
       <recent name="$PROJECT_DIR$/test/features/support" />
       <recent name="$PROJECT_DIR$/test/features/api/dossier_api" />
       <recent name="$PROJECT_DIR$/results" />
-      <recent name="$PROJECT_DIR$/test/public/resources/data" />
-      <recent name="$PROJECT_DIR$/test/features/step_definitions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/features/api/api_health_check" />
@@ -339,44 +344,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber.Scenario: #001 Ensure retropaper person API return single all user details">
-    <configuration name="Scenario: User Search" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
-      <module name="retropaper_api_tests" />
-      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/movie_api/movie_search.feature" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^User Search$" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scenario: #001 Ensure retropaper person API return single all user details" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+  <component name="RunManager" selected="Cucumber.Scenario: #001 Ensure person API return available person details by person ID (3)">
+    <configuration name="Scenario: #001 Ensure person API return available person details by person ID (1)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
       <module name="retropaper_api_tests" />
       <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -399,7 +368,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/person_api/person_search.feature" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^\#001 Ensure retropaper person API return single all user details$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^\#001 Ensure person API return available person details by person ID$" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
@@ -412,10 +381,139 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method v="2" />
     </configuration>
+    <configuration name="Scenario: #001 Ensure person API return available person details by person ID (2)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <module name="retropaper_api_tests" />
+      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/person_api/person_search.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^\#001 Ensure person API return available person details by person ID$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scenario: #001 Ensure person API return available person details by person ID (3)" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <module name="retropaper_api_tests" />
+      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/person_api/person_search.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^\#001 Ensure person API return available person details by person ID$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scenario: #002 Ensure person API return available person details by person's Full Name" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
+      <module name="retropaper_api_tests" />
+      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$/test" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/api/person_api/person_search.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="^\#002 Ensure person API return available person details by person\'s Full Name$" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="retropaper_api_tests" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$/test/features/step_definitions" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/test/features/step_definitions/test.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber.Scenario: #001 Ensure retropaper person API return single all user details" />
-        <item itemvalue="Cucumber.Scenario: User Search" />
+        <item itemvalue="Cucumber.Scenario: #001 Ensure person API return available person details by person ID (3)" />
+        <item itemvalue="Ruby.test" />
+        <item itemvalue="Cucumber.Scenario: #002 Ensure person API return available person details by person's Full Name" />
+        <item itemvalue="Cucumber.Scenario: #001 Ensure person API return available person details by person ID (2)" />
+        <item itemvalue="Cucumber.Scenario: #001 Ensure person API return available person details by person ID (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -433,17 +531,44 @@
       <workItem from="1563293268496" duration="14298000" />
       <workItem from="1564491656642" duration="6970000" />
       <workItem from="1565358683024" duration="10055000" />
-      <workItem from="1565796169755" duration="13132000" />
+      <workItem from="1565796169755" duration="60104000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Scenario__#001_Ensure_retropaper_person_API_return_single_all_user_details - 2019.08.14 at 11h 25m 48s.xml">
-      <configuration name="Scenario: #001 Ensure retropaper person API return single all user details" configurationId="CucumberRunConfigurationType" />
+    <history-entry file="Scenario__#001_Ensure_person_API_return_all_available_user_or_person_details - 2019.08.16 at 11h 45m 40s.xml">
+      <configuration name="Scenario: #001 Ensure person API return all available user or person details" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_all_available_user_or_person_details_(1) - 2019.08.16 at 12h 01m 29s.xml">
+      <configuration name="Scenario: #001 Ensure person API return all available user or person details (1)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_user_or_person_details_by_person_ID - 2019.08.16 at 12h 18m 04s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available user or person details by person ID" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_user_or_person_details_by_person_ID_(1) - 2019.08.16 at 12h 19m 35s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available user or person details by person ID (1)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_user_or_person_details_by_person_ID_(2) - 2019.08.16 at 12h 23m 40s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available user or person details by person ID (2)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_person_details_by_person_ID - 2019.08.16 at 12h 39m 55s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available person details by person ID" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_person_details_by_person_ID_(1) - 2019.08.16 at 12h 52m 27s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available person details by person ID (1)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_person_details_by_person_ID_(1) - 2019.08.16 at 12h 52m 55s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available person details by person ID (1)" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#002_Ensure_person_API_return_available_person_details_by_person's_Full_Name - 2019.08.18 at 12h 49m 57s.xml">
+      <configuration name="Scenario: #002 Ensure person API return available person details by person's Full Name" configurationId="CucumberRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Scenario__#001_Ensure_person_API_return_available_person_details_by_person_ID_(3) - 2019.08.18 at 15h 33m 19s.xml">
+      <configuration name="Scenario: #001 Ensure person API return available person details by person ID (3)" configurationId="CucumberRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44455000" />
+    <option name="totallyTimeSpent" value="91427000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,13 +581,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="986" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45078298" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30536914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -470,7 +596,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.61856824" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37024608" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -482,16 +608,21 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_person_details_by_person_ID__3_.rcov" NAME="Scenario: #001 Ensure person API return available person details by person ID (3) Coverage Results" MODIFIED="1566156797433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@test.rcov" NAME="test Coverage Results" MODIFIED="1566149481675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/features/step_definitions" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_user_or_person_details_by_person_ID.rcov" NAME="Scenario: #001 Ensure person API return available user or person details by person ID Coverage Results" MODIFIED="1565972283116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_person_details_by_person_ID.rcov" NAME="Scenario: #001 Ensure person API return available person details by person ID Coverage Results" MODIFIED="1565973593858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_person_details_by_person_ID__1_.rcov" NAME="Scenario: #001 Ensure person API return available person details by person ID (1) Coverage Results" MODIFIED="1565974374123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_all_available_user_or_person_details__1_.rcov" NAME="Scenario: #001 Ensure person API return all available user or person details (1) Coverage Results" MODIFIED="1565971270917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___002_Ensure_person_API_return_available_person_details_by_person_s_Full_Name.rcov" NAME="Scenario: #002 Ensure person API return available person details by person's Full Name Coverage Results" MODIFIED="1566146995442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_all_available_user_or_person_details.rcov" NAME="Scenario: #001 Ensure person API return all available user or person details Coverage Results" MODIFIED="1565970338208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_user_or_person_details_by_person_ID__1_.rcov" NAME="Scenario: #001 Ensure person API return available user or person details by person ID (1) Coverage Results" MODIFIED="1565972373831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
     <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_retropaper_person_API_return_single_all_user_details.rcov" NAME="Scenario: #001 Ensure retropaper person API return single all user details Coverage Results" MODIFIED="1565796346510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_movie_API_return_all_available_movie_details__1_.rcov" NAME="Scenario: #001 Ensure movie API return all available movie details (1) Coverage Results" MODIFIED="1565963893317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_movie_API_return_all_available_movie_details.rcov" NAME="Scenario: #001 Ensure movie API return all available movie details Coverage Results" MODIFIED="1565903260871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
+    <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_user_or_person_details_by_person_ID__2_.rcov" NAME="Scenario: #001 Ensure person API return available user or person details by person ID (2) Coverage Results" MODIFIED="1565972618268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BuildCucumber.groovy" />
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/step_definitions/api_status.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/step_definitions/api_version.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -589,9 +720,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/ui_helper_methods.rb" />
-    <entry file="file://$PROJECT_DIR$/test/features/support/read_json_frm_dir.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ResultsUpload/options_manager.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -614,13 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/public/resources/data/all_users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -694,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/helper_methods.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -730,31 +844,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/env_int.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="15" />
+        <state relative-caret-position="342">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        <state relative-caret-position="266">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
+    <entry file="file://$PROJECT_DIR$/test/public/resources/data/all_movie.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="300">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/step_definitions/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="284" column="43" selection-start-line="284" selection-start-column="4" selection-end-line="284" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="90" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="90" />
+        <state relative-caret-position="948">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/support/read_json_frm_dir.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="54" column="54" lean-forward="true" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
         </state>
       </provider>
     </entry>
