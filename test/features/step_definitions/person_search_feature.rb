@@ -94,7 +94,7 @@ And(/^expected "([^"]*)" json file should match with the response$/) do |file_na
   p "#############################################"
   p "@act_response: #{@act_response}"
 
-  expect(@act_response).to eql(expected_data)
+  expect(@act_response).to eq(expected_data)
   # expect(@act_response).to include(expected_data)
   # expect(JSON.parse(@act_response)).to eq (JSON.parse(expected_data))
 
