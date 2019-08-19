@@ -205,7 +205,6 @@ spec:
                     """
 				}
 				output('Run Test APIs', 'success')
-
 			}
 			catch(err) {
 				output('Run Test APIs', 'failure')
@@ -217,7 +216,7 @@ spec:
                             classifications: [
                                 [
                                     'key': 'API',
-                                    'value': 'Applicant'
+                                    'value': 'Person'
                                 ]
                             ]
 			}
