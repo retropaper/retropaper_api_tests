@@ -1,6 +1,6 @@
 
 # Ignore results dir
-/results/placeHolder.json
+#/results/placeHolder.json
 #/results/results_api_output.json
 Gemfile.lock
 

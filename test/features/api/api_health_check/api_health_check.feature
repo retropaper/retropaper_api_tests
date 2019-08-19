@@ -1,7 +1,7 @@
-@GATEWAY_HEALTH_CHECK
+@HEALTH_CHECK
 Feature: Retropaper API Service Health Check
 
-  @HIGH_hold @HIGH_GATEWAY_hold @ghc1
+  @HIGH1 @ghc1
   Scenario: retropaper API service health check
     Given "PERSON_API" service endpoint: "HEALTH" is called
     And service status code should return "200"
