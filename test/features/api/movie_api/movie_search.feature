@@ -94,21 +94,21 @@ Feature: MOVIE API: Movie Search
 #  }
 
 
-  @HIGH @mov3
+  @HIGH1 @mov3
   Scenario: #003 Ensure movie API return single movie movie details by movie title
     Given "GET" service "MOVIE_API" endpoint: "MOVIE" is called with "MOVIE_TITLE" parameter
     And service status code should return "200"
     And the response body should not be null
     Then "MOVIE_API" service should return all movie details
 
-  @HIGH @mov4
+  @HIGH1 @mov4
   Scenario: #004 Ensure movie API return single movie movie details by movie released year
     Given "GET" service "MOVIE_API" endpoint: "MOVIE" is called with "MOVIE_RELEASED_YEAR" parameter
     And service status code should return "200"
     And the response body should not be null
     Then "MOVIE_API" service should return all movie details
 
-  @HIGH @mov5
+  @HIGH1 @mov5
   Scenario: #005 Ensure movie API return 400 status code with bad parameter
     Given "GET" service "MOVIE_API" endpoint: "MOVIE" is called with "BAD_REQUEST" parameter
     And service status code should return "400"
