@@ -217,7 +217,7 @@ spec:
                                           classifications: [
                                               [
                                                   'key': 'API',
-                                                  'value': 'Applicant'
+                                                  'value': 'Person'
                                               ]
                                           ]
               			}
