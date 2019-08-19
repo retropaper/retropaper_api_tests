@@ -7,7 +7,7 @@ Feature: Person API: Search for person
   3. People by Name : /api/v1/person/name/{name}
   4. Search People : /api/v1/person/search?term={term}
 
-  @HIGH @ps1
+  @HIGH1 @ps1
   Scenario Outline: #001 Ensure person API return available person details by person ID
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_ID" : "<id>" parameter
     And service status code should return "200"
@@ -43,7 +43,7 @@ Feature: Person API: Search for person
     And characters ID: "<characters_id>" and Movie ID: "<characters_movieId>" and Person ID: "<characters_personId>" and "<characters_fullName>" should match with the response
     Examples:
       | id        | fullname  | characters_id | characters_movieId | characters_personId | characters_fullName |
-      | nm0000093 | Brad Pitt | 168462        | tt1210166          | nm0000093           | Billy Beane         |
+      | nm0000093 | Brad Pitt | 243082        | tt1764234          | nm0000093           | Jackie         |
 
   @HIGH1 @ps3
   Scenario Outline: #003 Ensure person API return available person details by person's Full Name
