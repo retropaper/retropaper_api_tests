@@ -215,6 +215,8 @@ spec:
 			try {
 				container('ruby') {
 					sh """
+					    mkdir -p results
+					    ls -ltar
                         cd test
 						cucumber features/ -t @HIGH --format json --out ../results/results_api_output.json --expand -f pretty
                     """
