@@ -79,18 +79,29 @@ Then(/^characters ID: "([^"]*)" and Movie ID: "([^"]*)" and Person ID: "([^"]*)"
   expect(@act_char_full_name.gsub(/[^a-zA-Z0-9\-]/,"") ).to eql(@exp_char_full_name.gsub(/[^a-zA-Z0-9\-]/,""))
 end
 
-And(/^expected "([^"]*)" json file should match with the response$/) do |arg1|
-  file_name_not_null = arg1
+And(/^expected "([^"]*)" json file should match with the response$/) do |file_name|
+  file_name_not_null = file_name
   if file_name_not_null == nil
     @file_if_null = file_name_not_null == nil ? 'null' : file_name_not_null
-    fail("Expected JSON: (arg1) file but got #{@file_if_null}")
+    fail("Expected JSON file: (#{file_name}) but got #{@file_if_null}")
   end
-
   @response = @res["message"]
-  @a_response = JSON.parse(@response)
+  @act_response = JSON.parse(@response)
 
-  p @actual_response
-  # @response_data = @accrual_data_rs['data']
-  expected_data = (read_json "#{arg1}")[params]
-  expect(@response_data).to include(expected_data)
+  expected_data = (read_json "#{file_name}")
+
+
+
+  p "expected_data: #{expected_data}"
+  p "#############################################"
+  p "@act_response: #{@act_response}"
+
+  expect(@act_response).to eql(expected_data)
+  # expect(@act_response).to include(expected_data)
+  #
+  #
+  #
+  #
+  # expect(JSON.parse(@act_response)).to eq (JSON.parse(expected_data))
+
 end

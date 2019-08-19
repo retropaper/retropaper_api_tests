@@ -54,8 +54,8 @@ Feature: Person API: Search for person
     And person full Name "<fullname>" should match with the response person full name
     And expected "person_search_by_full_name" json file should match with the response
     Examples:
-      | id        | fullname  | characters_id | characters_movieId | characters_personId | characters_fullName |
-      | nm0000093 | Brad Pitt | 165518        | tt3640424          | nm0000093           | Max Vatan           |
+      | id        | fullname  |
+      | nm0000093 | Brad Pitt |
 
 
   @HIGH1 @ps4a
