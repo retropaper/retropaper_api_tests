@@ -8,8 +8,8 @@ Feature: Person API: Search for person
   4. Search Crew : /api/v1/person/crew/{movieId} - Returns the Person records for all of the crew in a given movie
   5. Search Characters : /api/v1/person/characters/{movieId} - Returns the Person records for all of the character in a given movie
 
-  @HIGH1 @ps1
-  Scenario Outline: 001 Ensure person API return available person details by person ID
+  @HIGH @ps1
+  Scenario Outline: #001 Ensure person API return available person details by person ID
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_ID" : "<id>" parameter
     And service status code should return "200"
     And the response body should not be null
@@ -32,7 +32,7 @@ Feature: Person API: Search for person
       | nm0002071 | Will Ferrell | 233871        | tt4481514          | nm0002071           | Scott Johansen                                      |
 
   @HIGH @ps2
-  Scenario Outline: 002 Ensure person API return available person (Brad Pitt) details by person ID
+  Scenario Outline: #002 Ensure person API return available person (Brad Pitt) details by person ID
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_ID" : "<id>" parameter
     And service status code should return "200"
     And the response body should not be null
@@ -44,7 +44,7 @@ Feature: Person API: Search for person
       | nm0000093 | Brad Pitt | 243082        | tt1764234          | nm0000093           | Jackie              |
 
   @HIGH @ps3
-  Scenario Outline: 003 Ensure person API return available person details by person's Full Name
+  Scenario Outline: #003 Ensure person API return available person details by person's Full Name
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_NAME" : "<fullname>" parameter
     And service status code should return "200"
     And the response body should not be null
@@ -56,7 +56,7 @@ Feature: Person API: Search for person
       | nm6076448 | Will Smith |
 
   @HIGH @ps4
-  Scenario Outline: 004 SEARCH TERM "<term>" should return all the available matching person ID and full name
+  Scenario Outline: #004 SEARCH TERM <smith> should return all the available matching person ID and full name
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
     And the response body should not be null
@@ -69,7 +69,7 @@ Feature: Person API: Search for person
       | smith | nm4186686 | John E. Messensmith |
 
   @HIGH @ps5
-  Scenario Outline: 005 SEARCH TERM "<term>" should not be case sensitive and should return available matching ID and Full Name
+  Scenario Outline: #005 SEARCH TERM "<keith>" should not be case sensitive and should return available matching ID and Full Name
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
     And the response body should not be null
@@ -80,7 +80,7 @@ Feature: Person API: Search for person
       | keith | nm4552070 | Ahkeith Salley  |
 
   @HIGH @ps6 @bug_unable_to_handle_letter_case
-  Scenario Outline: 006 SEARCH TERM Letter case: "<term>" service GET call should be successful
+  Scenario Outline: #006 SEARCH TERM Letter case: "<Keith>" service GET call should be successful
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
     And the response body should not be null
