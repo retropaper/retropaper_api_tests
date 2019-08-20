@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b6eaddbe-99dc-4b63-82aa-6f1bc3b92ef1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/support/env_int.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/support/env_int.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bdd_reporter/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+            <state relative-caret-position="464">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
             </state>
           </provider>
         </entry>
@@ -25,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="441">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -34,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/support/env_int.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="32" selection-start-line="32" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="307">
+              <caret line="35" column="27" selection-start-line="34" selection-end-line="35" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -43,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+            <state relative-caret-position="232">
+              <caret line="139" column="68" selection-start-line="139" selection-start-column="68" selection-end-line="139" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -162,7 +165,6 @@
         <option value="$PROJECT_DIR$/test/features/step_definitions/gateway_api_health_check_feature.rb" />
         <option value="$PROJECT_DIR$/test/features/api/dossier_api/create_new_dossier.feature" />
         <option value="$PROJECT_DIR$/test/public/resources/data/all_movie.json" />
-        <option value="$PROJECT_DIR$/test/features/support/env_int.rb" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/test.rb" />
         <option value="$PROJECT_DIR$/test/public/resources/data/all_users.json" />
         <option value="$PROJECT_DIR$/test/features/api/api_health_check/api_health_check.feature" />
@@ -172,9 +174,10 @@
         <option value="$PROJECT_DIR$/pr-pod-template.groovy" />
         <option value="$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json" />
         <option value="$PROJECT_DIR$/test/features/support/json_equality_check.rb" />
+        <option value="$PROJECT_DIR$/test/features/support/env_int.rb" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" />
-        <option value="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" />
         <option value="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" />
+        <option value="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" />
       </list>
     </option>
   </component>
@@ -522,7 +525,7 @@
       <workItem from="1565358683024" duration="10055000" />
       <workItem from="1565796169755" duration="64286000" />
       <workItem from="1566237738318" duration="9590000" />
-      <workItem from="1566310745141" duration="15187000" />
+      <workItem from="1566310745141" duration="20879000" />
     </task>
     <servers />
   </component>
@@ -559,7 +562,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120386000" />
+    <option name="totallyTimeSpent" value="126078000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -881,34 +884,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/support/json_equality_check.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/env_int.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="32" selection-start-line="32" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="307">
+          <caret line="35" column="27" selection-start-line="34" selection-end-line="35" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="441">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/support/json_equality_check.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+        <state relative-caret-position="232">
+          <caret line="139" column="68" selection-start-line="139" selection-start-column="68" selection-end-line="139" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        <state relative-caret-position="464">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>

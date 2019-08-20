@@ -76,7 +76,7 @@ Then(/^characters ID: "([^"]*)" and Movie ID: "([^"]*)" and Person ID: "([^"]*)"
   expect(act_char_id.to_s).to eql(exp_char_id.to_s)
   expect(act_char_movie_id.to_s).to eql(exp_char_movie_id.to_s)
   expect(act_char_pers_id.to_s).to eql(exp_char_pers_id.to_s)
-  expect(@act_char_full_name.gsub(/[^a-zA-Z0-9\-]/,"") ).to eql(@exp_char_full_name.gsub(/[^a-zA-Z0-9\-]/,""))
+  expect(@act_char_full_name.gsub(/[^a-zA-Z0-9\-]/,"")).to eql(@exp_char_full_name.gsub(/[^a-zA-Z0-9\-]/,""))
 end
 
 And(/^expected "([^"]*)" json file parameter: "([^"]*)" should match with the response$/) do |file_name, parameter_val|
@@ -122,3 +122,33 @@ Given(/^Search Term: "([^"]*)" should match with the response ID: "([^"]*)" and 
     fail("Matching ID: #{arg2} and Search Term: #{arg1} includes in the Full Name: #{arg3} Could not identified in the json response, Test Step Failed")
   end
 end
+
+Given(/^CREW ID: "([^"]*)", Movie ID: "([^"]*)", Person ID: "([^"]*)" and Person Type: "([^"]*)"  should match with the response$/) do |arg1, arg2, arg3, arg4|
+  flag = false
+  @response = @res["message"]
+  response_body_hash = JSON.parse(@response)
+  response_body_hash[0]['crew'].each {|keys_value|
+    if keys_value['movieId'] == arg2
+      p "keys_value: #{keys_value}"
+      p "keys_value Id: [#{keys_value['id']}]"
+      p "keys_value movieId: [#{keys_value['movieId']}]"
+      p "keys_value personId: [#{keys_value['personId']}]"
+      p "keys_value personType: [#{keys_value['personType']}]"
+      expect(keys_value['id'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg1), "ID does not match"
+      expect(keys_value['movieId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg2), "Movie ID does not match"
+      expect(keys_value['personId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg3), "Person ID does not match"
+      expect(keys_value['personType'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg4), "Person Type does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Matching Movie ID: #{arg2} and Search crew movie ID: #{arg1} with the json response, Test Step Passed"
+  else
+    fail("Matching Movie ID: #{arg2} and Search crew movie ID: #{arg1} with the json response, Test Step Failed")
+  end
+end
+
+
+
+

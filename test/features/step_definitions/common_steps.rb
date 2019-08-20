@@ -38,6 +38,26 @@ Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)"
             @arg5 = "#{arg5}"
           end
           @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['PARAM_PERSON_SEARCH']}#{ENV['PARAM_PERSON_TERM']}#{@arg5}"
+        when "PERSON_CREW"
+          @arg5 = ""
+          arg5.match(/\s/) ? @flag_pn = true : @flag_pn = false
+          p "@flag_pn: #{@flag_pn}"
+          if @flag_pn
+            @arg5 = "#{URI.encode(arg5)}"
+          else
+            @arg5 = "#{arg5}"
+          end
+          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['PARAM_PERSON_CREW']}#{@arg5}"
+        when "PERSON_CHARACTERS"
+          @arg5 = ""
+          arg5.match(/\s/) ? @flag_pn = true : @flag_pn = false
+          p "@flag_pn: #{@flag_pn}"
+          if @flag_pn
+            @arg5 = "#{URI.encode(arg5)}"
+          else
+            @arg5 = "#{arg5}"
+          end
+          @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['PARAM_PERSON_CHARACTERS']}#{@arg5}"
         when "BAD_REQUEST"
           @build_endpoint = "#{ENV['PERSON_API']}/#{ENV['BAD_REQUEST']}"
         else

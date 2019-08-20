@@ -53,7 +53,7 @@ Feature: Person API: Search for person
     And expected "person_search_by_full_name" json file parameter: "data" should match with the response
     Examples:
       | id        | fullname   |
-      | nm6076448 | Will Smith |
+      | nm0043742 | David Ayer |
 
   @HIGH @ps4
   Scenario Outline: #004 SEARCH TERM <smith> should return all the available matching person ID and full name
@@ -88,4 +88,15 @@ Feature: Person API: Search for person
     Examples:
       | term  | id        | fullName         |
       | Keith | nm5079116 | Keith Arrowsmith |
+
+  @HIGH @ps7
+  Scenario Outline: #007 SEARCH CREW "<movie_id>" should not be case sensitive and should return available matching ID and Full Name
+    Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_CREW" : "<movie_id>" parameter
+    And service status code should return "200"
+    And the response body should not be null
+    And CREW ID: "<id>", Movie ID: "<movie_id>", Person ID: "<person_id>" and Person Type: "<person_type>"  should match with the response
+    Examples:
+      | id     | movie_id  | person_id | person_type |
+      | 964547 | tt1386697 | nm0043742 | director    |
+
 
