@@ -79,23 +79,46 @@ Then(/^characters ID: "([^"]*)" and Movie ID: "([^"]*)" and Person ID: "([^"]*)"
   expect(@act_char_full_name.gsub(/[^a-zA-Z0-9\-]/,"") ).to eql(@exp_char_full_name.gsub(/[^a-zA-Z0-9\-]/,""))
 end
 
-And(/^expected "([^"]*)" json file should match with the response$/) do |file_name|
+And(/^expected "([^"]*)" json file parameter: "([^"]*)" should match with the response$/) do |file_name, parameter_val|
   file_name_not_null = file_name
   if file_name_not_null == nil
     @file_if_null = file_name_not_null == nil ? 'null' : file_name_not_null
     fail("Expected JSON file: (#{file_name}) but got #{@file_if_null}")
   end
+  @response_msg = @res["message"]
+  @response_string = @response_msg.to_s.gsub(/\\n/, "").gsub(/\\"/, '"')
+  @response_parse = JSON.parse(@response_string)
+  expected_data = (read_json "#{file_name}")[parameter_val]
+  expected_parse = expected_data.to_json
+  expected_string = expected_parse.to_s.gsub(/\\n/, "").gsub(/\\"/, '"')
+  expected_parse = JSON.parse(expected_string)
+  @act = @response_parse.inject({}){|s, h| s[h] = true; s}
+  @exp = expected_parse.inject({}){|s, h| s[h] = true; s}
+  p "Actual: #{@act}"
+  p "Expect: #{@exp}"
+  expect(@act).to eq(@exp)
+end
+
+Given(/^Search Term: "([^"]*)" should match with the response ID: "([^"]*)" and Full Name: "([^"]*)"$/) do |arg1, arg2, arg3|
+  flag = false
+  search_term_value = arg1.downcase
   @response = @res["message"]
-  @act_response = JSON.parse(@response)
-
-  expected_data = (read_json "#{file_name}")
-
-  p "expected_data: #{expected_data}"
-  p "#############################################"
-  p "@act_response: #{@act_response}"
-
-  expect(@act_response).to eq(expected_data)
-  # expect(@act_response).to include(expected_data)
-  # expect(JSON.parse(@act_response)).to eq (JSON.parse(expected_data))
-
+  response_body_hash = JSON.parse(@response)
+  response_body_hash.each {|keys_value|
+    if keys_value['id'] == arg2
+      p "keys_value: #{keys_value}"
+      p "keys_value id: #{keys_value['id']}"
+      p "keys_value full name: #{keys_value['fullName']}"
+      expect(keys_value['id']).to eq(arg2), "ID does not match"
+      expect(keys_value['fullName'].downcase).to include(search_term_value), "Full Name: #{keys_value['fullName']} does not contain search term: #{search_term_value}"
+      expect(keys_value['fullName']).to eq(arg3), "Full Name does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Matching ID: #{arg2} and Search Term: #{arg1} includes in the Full Name: #{arg3} identified in the json response, Test Step Passed"
+  else
+    fail("Matching ID: #{arg2} and Search Term: #{arg1} includes in the Full Name: #{arg3} Could not identified in the json response, Test Step Failed")
+  end
 end
