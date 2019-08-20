@@ -92,11 +92,7 @@ And(/^expected "([^"]*)" json file parameter: "([^"]*)" should match with the re
   expected_parse = expected_data.to_json
   expected_string = expected_parse.to_s.gsub(/\\n/, "").gsub(/\\"/, '"')
   expected_parse = JSON.parse(expected_string)
-  @act = @response_parse.inject({}){|s, h| s[h] = true; s}
-  @exp = expected_parse.inject({}){|s, h| s[h] = true; s}
-  p "Actual: #{@act}"
-  p "Expect: #{@exp}"
-  expect(@act).to eq(@exp)
+  expect(@response_parse).to eq(expected_parse)
 end
 
 Given(/^Search Term: "([^"]*)" should match with the response ID: "([^"]*)" and Full Name: "([^"]*)"$/) do |arg1, arg2, arg3|
@@ -149,6 +145,31 @@ Given(/^CREW ID: "([^"]*)", Movie ID: "([^"]*)", Person ID: "([^"]*)" and Person
   end
 end
 
+Given(/^CHARACTERS ID: "([^"]*)", Movie ID: "([^"]*)", Person ID: "([^"]*)" and Full Name: "([^"]*)"  should match with the response$/) do |arg1, arg2, arg3, arg4|
+  flag = false
+  @response = @res["message"]
+  response_body_hash = JSON.parse(@response)
+  response_body_hash[0]['characters'].each {|keys_value|
+    if keys_value['movieId'] == arg2
+      p "keys_value: #{keys_value}"
+      p "keys_value Id: [#{keys_value['id']}]"
+      p "keys_value movieId: [#{keys_value['movieId']}]"
+      p "keys_value personId: [#{keys_value['personId']}]"
+      p "keys_value personType: [#{keys_value['fullName']}]"
+      expect(keys_value['id'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg1), "ID does not match"
+      expect(keys_value['movieId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg2), "Movie ID does not match"
+      expect(keys_value['personId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg3), "Person ID does not match"
+      expect(keys_value['fullName'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg4.to_s.gsub(/[^a-zA-Z0-9\-]/,"")), "Person Type does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Matching Movie ID: #{arg2} and Search Character movie ID: #{arg1} with the json response, Test Step Passed"
+  else
+    fail("Matching Movie ID: #{arg2} and Search Character movie ID: #{arg1} with the json response, Test Step Failed")
+  end
+end
 
 
 

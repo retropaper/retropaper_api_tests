@@ -90,7 +90,7 @@ Feature: Person API: Search for person
       | Keith | nm5079116 | Keith Arrowsmith |
 
   @HIGH @ps7
-  Scenario Outline: #007 SEARCH CREW "<movie_id>" should not be case sensitive and should return available matching ID and Full Name
+  Scenario Outline: #007 SEARCH CREW "<movie_id>" should return crew record
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_CREW" : "<movie_id>" parameter
     And service status code should return "200"
     And the response body should not be null
@@ -98,5 +98,18 @@ Feature: Person API: Search for person
     Examples:
       | id     | movie_id  | person_id | person_type |
       | 964547 | tt1386697 | nm0043742 | director    |
+
+  @HIGH @ps8
+  Scenario Outline: #008 SEARCH CHARACTERS "<movie_id>" should return characters record
+    Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_CHARACTERS" : "<movie_id>" parameter
+    And service status code should return "200"
+    And the response body should not be null
+    And CHARACTERS ID: "<id>", Movie ID: "<movie_id>", Person ID: "<person_id>" and Full Name: "<person_full_name>"  should match with the response
+    Examples:
+      | id     | movie_id  | person_id | person_full_name |
+      | 241350 | tt1386697 | nm3053338 | Harley Quinn     |
+      | 240427 | tt1598642 | nm3053338 | Ann Burden       |
+
+
 
 
