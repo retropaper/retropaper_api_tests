@@ -17,19 +17,21 @@ Feature: Person API: Search for person
     And Full Name: "<fullname>" should match with the response
     And characters ID: "<characters_id>" and Movie ID: "<characters_movieId>" and Person ID: "<characters_personId>" and "<characters_fullName>" should match with the response
     Examples:
-      | id        | fullname     | characters_id | characters_movieId | characters_personId | characters_fullName                                 |
-      | nm0002071 | Will Ferrell | 246326        | tt1490017          | nm0002071           | Lord Business, President Business, The Man Upstairs |
-      | nm0002071 | Will Ferrell | 270748        | tt1531663          | nm0002071           | Nick Halsey                                         |
-      | nm0002071 | Will Ferrell | 228276        | tt1255919          | nm0002071           | Sherlock Holmes                                     |
-      | nm0002071 | Will Ferrell | 268396        | tt1855401          | nm0002071           | Damien Weebs                                        |
-      | nm0002071 | Will Ferrell | 247309        | tt1608290          | nm0002071           | Jacobim Mugatu                                      |
-      | nm0002071 | Will Ferrell | 248504        | tt1386588          | nm0002071           | Allen Gamble                                        |
-      | nm0002071 | Will Ferrell | 238080        | tt2561572          | nm0002071           | James                                               |
-      | nm0002071 | Will Ferrell | 231232        | tt0457400          | nm0002071           | Dr. Rick Marshall                                   |
-      | nm0002071 | Will Ferrell | 281521        | tt1790886          | nm0002071           | Rep. Camden 'Cam' Brady                             |
-      | nm0002071 | Will Ferrell | 236468        | tt1702425          | nm0002071           | Armando                                             |
-      | nm0002071 | Will Ferrell | 267504        | tt1229340          | nm0002071           | Ron Burgundy                                        |
-      | nm0002071 | Will Ferrell | 233871        | tt4481514          | nm0002071           | Scott Johansen                                      |
+      | id        | fullname     | characters_id | characters_movieId | characters_personId | characters_fullName   |
+      | nm0002071 | Will Ferrell | 395280        | tt1229340          | nm0002071           | Ron Burgundy          |
+      | nm0002071 | Will Ferrell | 395363        | tt1855401          | nm0002071           | Damien Weebs          |
+      | nm0002071 | Will Ferrell | 362904        | tt1702425          | nm0002071           | Armando               |
+      | nm0002071 | Will Ferrell | 374196        | tt1608290          | nm0002071           | Jacobim Mugatu        |
+      | nm0002071 | Will Ferrell | 395745        | tt5657846          | nm0002071           | Brad                  |
+      | nm0002071 | Will Ferrell | 392077        | tt1528854          | nm0002071           | Brad Whitaker         |
+      | nm0002071 | Will Ferrell | 381045        | tt1001526          | nm0002071           | Megamind              |
+      | nm0002071 | Will Ferrell | 406633        | tt1790886          | nm0002071           | Rep. Camden Cam Brady |
+      | nm0002071 | Will Ferrell | 360499        | tt4481514          | nm0002071           | Scott Johansen        |
+      | nm0002071 | Will Ferrell | 356323        | tt1255919          | nm0002071           | Sherlock Holmes       |
+      | nm0002071 | Will Ferrell | 359370        | tt0457400          | nm0002071           | Dr. Rick Marshall     |
+      | nm0002071 | Will Ferrell | 376367        | tt1386588          | nm0002071           | Allen Gamble          |
+      | nm0002071 | Will Ferrell | 364708        | tt2561572          | nm0002071           | James                 |
+      | nm0002071 | Will Ferrell | 396696        | tt1531663          | nm0002071           | Nick Halsey           |
 
   @HIGH @ps2
   Scenario Outline: #002 Ensure person API return available person (Brad Pitt) details by person ID
@@ -41,7 +43,7 @@ Feature: Person API: Search for person
     And characters ID: "<characters_id>" and Movie ID: "<characters_movieId>" and Person ID: "<characters_personId>" and "<characters_fullName>" should match with the response
     Examples:
       | id        | fullname  | characters_id | characters_movieId | characters_personId | characters_fullName |
-      | nm0000093 | Brad Pitt | 243082        | tt1764234          | nm0000093           | Jackie              |
+      | nm0000093 | Brad Pitt | 388073        | tt1596363          | nm0000093           | Ben Rickert         |
 
   @HIGH @ps3
   Scenario Outline: #003 Ensure person API return available person details by person's Full Name
@@ -67,11 +69,11 @@ Feature: Person API: Search for person
     And the response body should not be null
     And Search Term: "<term>" should match with the response ID: "<id>" and Full Name: "<fullName>"
     Examples:
-      | term  | id        | fullName            |
-      | smith | nm4838654 | Stuart Arrowsmith   |
-      | smith | nm0326099 | Laura Goldsmith     |
-      | smith | nm7850826 | Lewis Goldsmith     |
-      | smith | nm4186686 | John E. Messensmith |
+      | term  | id        | fullName      |
+      | smith | nm0807548 | Brooke Smith  |
+      | smith | nm0808022 | Douglas Smith |
+      | smith | nm1741002 | Matt Smith    |
+      | smith | nm0001749 | Maggie Smith  |
 
   @HIGH @ps5
   Scenario Outline: #005 SEARCH TERM "<keith>" should not be case sensitive and should return available matching ID and Full Name
@@ -80,19 +82,19 @@ Feature: Person API: Search for person
     And the response body should not be null
     And Search Term: "<term>" should match with the response ID: "<id>" and Full Name: "<fullName>"
     Examples:
-      | term  | id        | fullName        |
-      | keith | nm4636194 | Markeith McCain |
-      | keith | nm4552070 | Ahkeith Salley  |
+      | term  | id        | fullName      |
+      | keith | nm0202966 | Keith David   |
+      | keith | nm1133042 | Keith Poulson |
 
-  @HIGH_not_in_scope @ps6 @bug_unable_to_handle_letter_case
+  @HIGH @ps6 @bug_unable_to_handle_letter_case
   Scenario Outline: #006 SEARCH TERM Letter case: "<Keith>" service GET call should be successful
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
     And the response body should not be null
     And Search Term: "<term>" should match with the response ID: "<id>" and Full Name: "<fullName>"
     Examples:
-      | term  | id        | fullName         |
-      | Keith | nm5079116 | Keith Arrowsmith |
+      | term  | id        | fullName    |
+      | Keith | nm0202966 | Keith David |
 
   @HIGH @ps7
   Scenario Outline: #007 SEARCH CREW "<movie_id>" should return crew record
@@ -101,8 +103,8 @@ Feature: Person API: Search for person
     And the response body should not be null
     And CREW ID: "<id>", Movie ID: "<movie_id>", Person ID: "<person_id>" and Person Type: "<person_type>"  should match with the response
     Examples:
-      | id     | movie_id  | person_id | person_type |
-      | 964547 | tt1386697 | nm0043742 | director    |
+      | id    | movie_id  | person_id | person_type     |
+      | 46149 | tt1386697 | nm1664042 | cinematographer |
 
   @HIGH @ps8
   Scenario Outline: #008 SEARCH CHARACTERS "<movie_id>" should return characters record
@@ -112,8 +114,8 @@ Feature: Person API: Search for person
     And CHARACTERS ID: "<id>", Movie ID: "<movie_id>", Person ID: "<person_id>" and Full Name: "<person_full_name>"  should match with the response
     Examples:
       | id     | movie_id  | person_id | person_full_name |
-      | 241350 | tt1386697 | nm3053338 | Harley Quinn     |
-      | 240427 | tt1598642 | nm3053338 | Ann Burden       |
+      | 368235 | tt1386697 | nm3053338 | Harley Quinn     |
+      | 367566 | tt1598642 | nm3053338 | Ann Burden       |
 
 
 

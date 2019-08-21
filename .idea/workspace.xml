@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6eaddbe-99dc-4b63-82aa-6f1bc3b92ef1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/features/step_definitions/movie_search_feature.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bdd_reporter/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="96" column="12" lean-forward="true" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state relative-caret-position="353">
+              <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/features/step_definitions/movie_search_feature.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -36,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-593">
+            <state relative-caret-position="-868">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
@@ -144,7 +163,6 @@
         <option value="$PROJECT_DIR$/test/features/step_definitions/test.rb" />
         <option value="$PROJECT_DIR$/test/public/resources/data/all_users.json" />
         <option value="$PROJECT_DIR$/test/features/api/api_health_check/api_health_check.feature" />
-        <option value="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" />
         <option value="$PROJECT_DIR$/results/results_api_output.json" />
         <option value="$PROJECT_DIR$/master-pod-template.groovy" />
         <option value="$PROJECT_DIR$/pr-pod-template.groovy" />
@@ -153,6 +171,8 @@
         <option value="$PROJECT_DIR$/test/features/step_definitions/common_steps.rb" />
         <option value="$PROJECT_DIR$/test/public/resources/data/person_search_by_full_name.json" />
         <option value="$PROJECT_DIR$/test/features/step_definitions/person_search_feature.rb" />
+        <option value="$PROJECT_DIR$/test/features/step_definitions/movie_search_feature.rb" />
+        <option value="$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature" />
         <option value="$PROJECT_DIR$/test/features/api/person_api/person_search.feature" />
       </list>
     </option>
@@ -240,6 +260,13 @@
               <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="features" type="462c0819:PsiDirectoryNode" />
+              <item name="step_definitions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="retropaper_api_tests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="retropaper_api_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="features" type="462c0819:PsiDirectoryNode" />
               <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,7 +307,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/features/support" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/features/step_definitions" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
@@ -293,8 +320,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/features/support" />
       <recent name="$PROJECT_DIR$/test/features/step_definitions" />
+      <recent name="$PROJECT_DIR$/test/features/support" />
       <recent name="$PROJECT_DIR$/test/public/resources/data" />
       <recent name="$PROJECT_DIR$/test/features/api/dossier_api" />
       <recent name="$PROJECT_DIR$/results" />
@@ -501,7 +528,7 @@
       <workItem from="1565358683024" duration="10055000" />
       <workItem from="1565796169755" duration="64286000" />
       <workItem from="1566237738318" duration="9590000" />
-      <workItem from="1566310745141" duration="30624000" />
+      <workItem from="1566310745141" duration="33215000" />
     </task>
     <servers />
   </component>
@@ -538,7 +565,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135823000" />
+    <option name="totallyTimeSpent" value="138414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,13 +621,6 @@
     <SUITE FILE_PATH="coverage/retropaper_api_tests@Scenario___001_Ensure_person_API_return_available_user_or_person_details_by_person_ID__2_.rcov" NAME="Scenario: #001 Ensure person API return available user or person details by person ID (2) Coverage Results" MODIFIED="1565972618268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" MODULE_NAME="retropaper_api_tests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/features/support/tools/pg_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/public/resources/json-schemas/schema.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -790,13 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/api/api_health_check/api_health_check.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -834,13 +847,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/json_equality_check.rb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-593">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/features/support/helper_methods.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -884,10 +890,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/step_definitions/movie_search_feature.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/step_definitions/common_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/features/api/movie_api/movie_search.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/features/api/person_api/person_search.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="96" column="12" lean-forward="true" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        <state relative-caret-position="353">
+          <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
         </state>
       </provider>
     </entry>

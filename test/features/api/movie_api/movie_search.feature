@@ -2,16 +2,20 @@
 Feature: MOVIE API: Movie Search
   Movie API will ensure endpoints are healthy and return expected results.
   Scopes:
-    1. All movies : /api/v1/movie/all
-    2. Movie By Id : /api/v1/movie/{id} id = (tt0000008)
-    3. Search Movies : /api/v1/movie/search?title={title}&year={year}
+  1. Movie By Id : /api/v1/movie/{id} id = (tt0000008)
+  2. Search Movies : /api/v1/movie/search?title={title}&year={year}
 
   @HIGH1 @mov1
-  Scenario: #001 Ensure movie API return all available movie details
-    Given "GET" service "MOVIE_API" endpoint: "MOVIE" is called with "MOVIE_ALL" parameter
+  Scenario Outline: #001 Ensure person API return available person details by person ID
+    Given "GET" service "MOVIE_API" endpoint: "MOVIE" is called with "_ID" : "<id>" parameter
     And service status code should return "200"
     And the response body should not be null
-    Then "MOVIE_API" service should return all movie details
+    Then Person ID: "<id>" should match with the response
+    And Full Name: "<fullname>" should match with the response
+    And characters ID: "<characters_id>" and Movie ID: "<characters_movieId>" and Person ID: "<characters_personId>" and "<characters_fullName>" should match with the response
+    Examples:
+      | id        | fullname     | characters_id | characters_movieId | characters_personId | characters_fullName                                 |
+      | nm0002071 | Will Ferrell | 246326        | tt1490017          | nm0002071           | Lord Business, President Business, The Man Upstairs |
 
   @HIGH1 @mov2
   Scenario: #002 Ensure movie API return single movie movie details by movie id
@@ -19,80 +23,20 @@ Feature: MOVIE API: Movie Search
     And service status code should return "200"
     And the response body should not be null
     Then "MOVIE_API" api should return single movie details
-    |id|tt0000008|
-    |title|Edison Kinetoscopic Record of a Sneeze (1894) |
-    |releaseYear|1894|
-    |genres_genreId_1|1|
-    |genres_movieId_1              |tt0000008|
-    |genres_genre_1              |Documentary |
-    |genres_genreId_2|2|
-    |genres_movieId_2              |tt0000008|
-    |genres_genre_2              |Short |
-    |people_personId_1              |nm0000168 |
-    |people_personType_1              |actor |
-    |people_personId_2              |nm0000169 |
-    |people_personType_2              |actor |
-    |people_reviewId_1              |1 |
-#
-#
-#  {
-#  "id": "tt0000008",
-#  "title": "Edison Kinetoscopic Record of a Sneeze (1894)",
-#  "releaseYear": 1894,
-#  "genres": [
-#  {
-#  "genreId": "1",
-#  "movieId": "tt0000008",
-#  "genre": "Documentary"
-#  },
-#  {
-#  "genreId": "2",
-#  "movieId": "tt0000008",
-#  "genre": "Short"
-#  }
-#  ],
-#  "people": [
-#  {
-#  "moviePrimaryPeopleId": {
-#  "movieId": "tt0000008",
-#  "personId": "nm0000168"
-#  },
-#  "personType": "actor"
-#  },
-#  {
-#  "moviePrimaryPeopleId": {
-#  "movieId": "tt0000008",
-#  "personId": "nm0000169"
-#  },
-#  "personType": "actor"
-#  }
-#  ],
-#  "reviews": [
-#  {
-#  "reviewId": 1,
-#  "authorName": "Keonte Davis",
-#  "dateCreated": 1565661207.000000000,
-#  "name": "Test Review",
-#  "reviewConent": "Some sample data to test content",
-#  "reviewRating": 3,
-#  "minReviewScale": 1,
-#  "maxReviewScale": 5,
-#  "movieId": "tt0000008"
-#  },
-#  {
-#  "reviewId": 2,
-#  "authorName": "Keonte Davis",
-#  "dateCreated": 1565661207.000000000,
-#  "name": "Test Review",
-#  "reviewConent": "Some sample data to test content",
-#  "reviewRating": 3,
-#  "minReviewScale": 1,
-#  "maxReviewScale": 5,
-#  "movieId": "tt0000008"
-#  }
-#  ]
-#  }
-
+      | id                  | tt0000008                                     |
+      | title               | Edison Kinetoscopic Record of a Sneeze (1894) |
+      | releaseYear         | 1894                                          |
+      | genres_genreId_1    | 1                                             |
+      | genres_movieId_1    | tt0000008                                     |
+      | genres_genre_1      | Documentary                                   |
+      | genres_genreId_2    | 2                                             |
+      | genres_movieId_2    | tt0000008                                     |
+      | genres_genre_2      | Short                                         |
+      | people_personId_1   | nm0000168                                     |
+      | people_personType_1 | actor                                         |
+      | people_personId_2   | nm0000169                                     |
+      | people_personType_2 | actor                                         |
+      | people_reviewId_1   | 1                                             |
 
   @HIGH1 @mov3
   Scenario: #003 Ensure movie API return single movie movie details by movie title
