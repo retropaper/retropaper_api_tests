@@ -2,6 +2,7 @@ require_relative '../support/helper_methods'
 require 'json'
 require 'rspec'
 
+
 Then(/^Person ID: "([^"]*)" should match with the response$/) do |arg1|
   @response_body = JSON.parse(@response)
   exp_person_id = arg1
@@ -31,6 +32,53 @@ Then(/^person full Name "([^"]*)" should match with the response person full nam
   act_person_fn = @response_body[0]['fullName'].to_s
   p "act_person_fn: #{act_person_fn}"
   act_person_fn.eql?(exp_person_fn) ? (p "expected: #{exp_person_fn} got: #{act_person_fn}, Step Assertion Passed") : fail("expected: #{exp_person_fn} got: #{act_person_fn}, Step Assertion Failed")
+end
+
+Then(/^response description should match with the expected "([^"]*)" json file parameter: "([^"]*)"$/) do |file_name, parameter_val|
+  act_desc = @response_body[0]['description'].to_s.gsub(/\s+/, "").gsub(/\\n/, "").delete('\\"')
+  p "act_desc: #{act_desc}"
+  expected_data = (read_json "#{file_name}")[parameter_val]
+  expected_parse = expected_data.to_s.gsub(/\s+/, "").gsub(/\\n/, "").delete('\\"')
+  p "expected_parse: #{expected_parse}"
+  expect(act_desc).to eq(expected_parse), "Description does not match"
+end
+
+Then(/^response characters should match with the expected "([^"]*)" json file parameter: "([^"]*)"$/) do |file_name, parameter_val|
+  act_desc = @response_body[0]['characters'].to_s.gsub(/\s+/, "").gsub(/\\n/, "")
+  p "act_desc: #{act_desc}"
+  expected_data = (read_json "#{file_name}")[parameter_val]
+  expected_parse = expected_data.to_s.gsub(/\s+/, "").gsub(/\\n/, "")
+  p "expected_parse: #{expected_parse}"
+end
+
+Then(/^the expected characters ID: "([^"]*)" and Movie ID: "([^"]*)" and Person ID: "([^"]*)" and "([^"]*)" should match with the response$/) do |arg1, arg2, arg3, arg4|
+  flag = false
+  search_term_value = arg1.downcase
+  @response = @res["message"]
+  response_body_hash = JSON.parse(@response)
+  p "##########################################################"
+  p "response_body_hash: #{response_body_hash[0]['characters']}"
+  p "##########################################################"
+  response_body_hash[0]['characters'].each {|keys_value|
+    if keys_value['id'] == arg1.to_i
+      p "keys_value: #{keys_value}"
+      p "keys_value id: #{@id = keys_value['id']}"
+      p "keys_value movieId: #{@movie_id = keys_value['movieId']}"
+      p "keys_value personId: #{@person_id = keys_value['personId']}"
+      p "keys_value fullName: #{@full_name = keys_value['fullName']}"
+      expect(keys_value['id']).to eq(arg1.to_i), "ID does not match"
+      expect(keys_value['movieId']).to eq(arg2), "Movie ID does not match"
+      expect(keys_value['personId']).to eq(arg3), "Person ID does not match"
+      expect(keys_value['fullName'].downcase).to eq(arg4.downcase), "Person Full Name does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Expected data matched with Actual Data, Test Step Passed"
+  else
+    fail("Expected data: id: #{@id}, movieId: #{@movie_id}, personId: #{@person_id} and fullName: #{@full_name} unable to match with Actual Data, Test Step Failed")
+  end
 end
 
 Then(/^characters ID: "([^"]*)" and Movie ID: "([^"]*)" and Person ID: "([^"]*)" and "([^"]*)" should match with the response$/) do |characters_id, characters_movie_id, characters_person_id, characters_full_name|
@@ -76,26 +124,100 @@ Then(/^characters ID: "([^"]*)" and Movie ID: "([^"]*)" and Person ID: "([^"]*)"
   expect(act_char_id.to_s).to eql(exp_char_id.to_s)
   expect(act_char_movie_id.to_s).to eql(exp_char_movie_id.to_s)
   expect(act_char_pers_id.to_s).to eql(exp_char_pers_id.to_s)
-  expect(@act_char_full_name.gsub(/[^a-zA-Z0-9\-]/,"") ).to eql(@exp_char_full_name.gsub(/[^a-zA-Z0-9\-]/,""))
+  expect(@act_char_full_name.gsub(/[^a-zA-Z0-9\-]/,"")).to eql(@exp_char_full_name.gsub(/[^a-zA-Z0-9\-]/,""))
 end
 
-And(/^expected "([^"]*)" json file should match with the response$/) do |file_name|
+And(/^expected "([^"]*)" json file parameter: "([^"]*)" should match with the response$/) do |file_name, parameter_val|
   file_name_not_null = file_name
   if file_name_not_null == nil
     @file_if_null = file_name_not_null == nil ? 'null' : file_name_not_null
     fail("Expected JSON file: (#{file_name}) but got #{@file_if_null}")
   end
-  @response = @res["message"]
-  @act_response = JSON.parse(@response)
-
-  expected_data = (read_json "#{file_name}")
-
-  p "expected_data: #{expected_data}"
-  p "#############################################"
-  p "@act_response: #{@act_response}"
-
-  expect(@act_response).to eql(expected_data)
-  # expect(@act_response).to include(expected_data)
-  # expect(JSON.parse(@act_response)).to eq (JSON.parse(expected_data))
-
+  @response_msg = @res["message"]
+  @response_string = @response_msg.to_s.gsub(/\\n/, "")
+  @response_parse = JSON.parse(@response_string)
+  expected_data = (read_json "#{file_name}")[parameter_val]
+  expected_parse = expected_data.to_json
+  expected_string = expected_parse.to_s.gsub(/\\n/, "")
+  expected_parse = JSON.parse(expected_string)
+  expect(@response_parse).to eq(expected_parse)
 end
+
+Given(/^Search Term: "([^"]*)" should match with the response ID: "([^"]*)" and Full Name: "([^"]*)"$/) do |arg1, arg2, arg3|
+  flag = false
+  search_term_value = arg1.downcase
+  @response = @res["message"]
+  response_body_hash = JSON.parse(@response)
+  response_body_hash.each {|keys_value|
+    if keys_value['id'] == arg2
+      p "keys_value: #{keys_value}"
+      p "keys_value id: #{keys_value['id']}"
+      p "keys_value full name: #{keys_value['fullName']}"
+      expect(keys_value['id']).to eq(arg2), "ID does not match"
+      expect(keys_value['fullName'].downcase).to include(search_term_value), "Full Name: #{keys_value['fullName']} does not contain search term: #{search_term_value}"
+      expect(keys_value['fullName']).to eq(arg3), "Full Name does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Matching ID: #{arg2} and Search Term: #{arg1} includes in the Full Name: #{arg3} identified in the json response, Test Step Passed"
+  else
+    fail("Matching ID: #{arg2} and Search Term: #{arg1} includes in the Full Name: #{arg3} Could not identified in the json response, Test Step Failed")
+  end
+end
+
+Given(/^CREW ID: "([^"]*)", Movie ID: "([^"]*)", Person ID: "([^"]*)" and Person Type: "([^"]*)"  should match with the response$/) do |arg1, arg2, arg3, arg4|
+  flag = false
+  @response = @res["message"]
+  response_body_hash = JSON.parse(@response)
+  response_body_hash[0]['crew'].each {|keys_value|
+    if keys_value['movieId'] == arg2
+      p "keys_value: #{keys_value}"
+      p "keys_value Id: [#{keys_value['id']}]"
+      p "keys_value movieId: [#{keys_value['movieId']}]"
+      p "keys_value personId: [#{keys_value['personId']}]"
+      p "keys_value personType: [#{keys_value['personType']}]"
+      expect(keys_value['id'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg1), "ID does not match"
+      expect(keys_value['movieId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg2), "Movie ID does not match"
+      expect(keys_value['personId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg3), "Person ID does not match"
+      expect(keys_value['personType'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg4), "Person Type does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Matching Movie ID: #{arg2} and Search crew movie ID: #{arg1} with the json response, Test Step Passed"
+  else
+    fail("Matching Movie ID: #{arg2} and Search crew movie ID: #{arg1} with the json response, Test Step Failed")
+  end
+end
+
+Given(/^CHARACTERS ID: "([^"]*)", Movie ID: "([^"]*)", Person ID: "([^"]*)" and Full Name: "([^"]*)"  should match with the response$/) do |arg1, arg2, arg3, arg4|
+  flag = false
+  @response = @res["message"]
+  response_body_hash = JSON.parse(@response)
+  response_body_hash[0]['characters'].each {|keys_value|
+    if keys_value['movieId'] == arg2
+      p "keys_value: #{keys_value}"
+      p "keys_value Id: [#{keys_value['id']}]"
+      p "keys_value movieId: [#{keys_value['movieId']}]"
+      p "keys_value personId: [#{keys_value['personId']}]"
+      p "keys_value personType: [#{keys_value['fullName']}]"
+      expect(keys_value['id'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg1), "ID does not match"
+      expect(keys_value['movieId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg2), "Movie ID does not match"
+      expect(keys_value['personId'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg3), "Person ID does not match"
+      expect(keys_value['fullName'].to_s.gsub(/[^a-zA-Z0-9\-]/,"")).to eq(arg4.to_s.gsub(/[^a-zA-Z0-9\-]/,"")), "Person Type does not match"
+      flag = true
+      break
+    end
+  }
+  if flag.eql? true
+    p "Matching Movie ID: #{arg2} and Search Character movie ID: #{arg1} with the json response, Test Step Passed"
+  else
+    fail("Matching Movie ID: #{arg2} and Search Character movie ID: #{arg1} with the json response, Test Step Failed")
+  end
+end
+
+
+

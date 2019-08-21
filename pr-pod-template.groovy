@@ -185,27 +185,10 @@ spec:
                     """
 				}
 				output('Compile', 'success')
-				cucumber buildStatus: 'UNSTABLE',
-                fileIncludePattern: 'results/results_api_output.json',
-                trendsLimit: 10,
-                classifications: [
-                    [
-                        'key': 'API',
-                        'value': 'Applicant'
-                    ]
-                ]
+
 			}
 			catch(err) {
 				output('Compile', 'failure')
-				cucumber buildStatus: 'UNSTABLE',
-                fileIncludePattern: 'results/results_api_output.json',
-                trendsLimit: 10,
-                classifications: [
-                    [
-                        'key': 'API',
-                        'value': 'Applicant'
-                    ]
-                ]
 				throw err
 			}
 		}
@@ -215,6 +198,9 @@ spec:
 			try {
 				container('ruby') {
 					sh """
+					    mkdir -p results
+					    chmod -R 777 results
+					    ls -ltar
                         cd test
 						cucumber features/ -t @HIGH --format json --out ../results/results_api_output.json --expand -f pretty
                     """
@@ -224,7 +210,17 @@ spec:
 			catch(err) {
 				output('Run Test APIs', 'failure')
 				throw err
-			}
+			} finally {
+              			cucumber buildStatus: 'UNSTABLE',
+                                          fileIncludePattern: 'results/results_api_output.json',
+                                          trendsLimit: 10,
+                                          classifications: [
+                                              [
+                                                  'key': 'API',
+                                                  'value': 'Person'
+                                              ]
+                                          ]
+              			}
 		}
 	}
 }

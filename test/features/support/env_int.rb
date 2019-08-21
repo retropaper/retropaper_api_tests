@@ -32,6 +32,10 @@ ENV['PARAM_PERSON_ID'] = ""
 ENV['PARAM_PERSON_NAME'] = "name/"
 ENV['PARAM_PERSON_SEARCH'] = "search?"
 ENV['PARAM_PERSON_TERM'] = "term="
+ENV['PARAM_PERSON_CREW'] = "crew/"
+ENV['PARAM_PERSON_CHARACTERS'] = "characters/"
+
+#Search Crew : /api/v1/person/crew/{movieId} - Returns the Person records for all of the crew in a given movie
 
 #MOVIE API
 ENV['PARAM_MOVIE_ALL'] = "all"
