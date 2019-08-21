@@ -1,5 +1,5 @@
 @DOSSIER_API
-Feature: Dossier: Create new dossier
+Feature: DOSSIER API: Dossier search
   Dossier API will ensure endpoints are healthy and return expected results.
   Scopes:
   1. Dossier : return 200 and response body is not null
