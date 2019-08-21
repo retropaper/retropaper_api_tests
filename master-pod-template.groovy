@@ -216,7 +216,7 @@ spec:
                             classifications: [
                                 [
                                     'key': 'API',
-                                    'value': 'Person'
+                                    'value': 'Person, Movie and Dossier'
                                 ]
                             ]
 			}

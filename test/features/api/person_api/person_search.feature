@@ -1,5 +1,5 @@
 @PERSON_API
-Feature: Person API: Search for person
+Feature: PERSON API: Search for person
   Person API will ensure endpoints are healthy and return expected results.
   Scopes:
   1. Person by Id : /api/v1/person/{id} id = nm0002071
@@ -71,30 +71,29 @@ Feature: Person API: Search for person
     Examples:
       | term  | id        | fullName      |
       | smith | nm0807548 | Brooke Smith  |
-      | smith | nm0808022 | Douglas Smith |
-      | smith | nm1741002 | Matt Smith    |
-      | smith | nm0001749 | Maggie Smith  |
+      | smith | nm0005445 | Kerr Smith    |
+      | smith | nm0807503 | Brandon Smith |
+      | smith | nm1576004 | Akeem Smith   |
 
   @HIGH @ps5
-  Scenario Outline: #005 SEARCH TERM "<keith>" should not be case sensitive and should return available matching ID and Full Name
+  Scenario Outline: #005 SEARCH TERM "<will>" should not be case sensitive and should return available matching ID and Full Name
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
     And the response body should not be null
     And Search Term: "<term>" should match with the response ID: "<id>" and Full Name: "<fullName>"
     Examples:
-      | term  | id        | fullName      |
-      | keith | nm0202966 | Keith David   |
-      | keith | nm1133042 | Keith Poulson |
+      | term | id        | fullName       |
+      | will | nm4270089 | Sammy Williams |
 
-  @HIGH @ps6 @bug_unable_to_handle_letter_case
-  Scenario Outline: #006 SEARCH TERM Letter case: "<Keith>" service GET call should be successful
+  @HIGH @ps6
+  Scenario Outline: #006 SEARCH TERM Letter case: "<Smith>" service GET call should be successful
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
     And the response body should not be null
     And Search Term: "<term>" should match with the response ID: "<id>" and Full Name: "<fullName>"
     Examples:
       | term  | id        | fullName    |
-      | Keith | nm0202966 | Keith David |
+      | Smith | nm0807548 | Brooke Smith |
 
   @HIGH @ps7
   Scenario Outline: #007 SEARCH CREW "<movie_id>" should return crew record
