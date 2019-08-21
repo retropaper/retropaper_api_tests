@@ -10,17 +10,20 @@ when "local"
   ENV['MOVIE_API'] = "movie"
 when "server"
   ENV['PERSON_SERVER_HOSTNAME'] = "https://retropaper-person-service.apps.openshift.sevatecdemo.com"
-  ENV['MOVIE_SERVER_HOSTNAME'] = "https://retropaper-person-service.apps.openshift.sevatecdemo.com"
+  ENV['MOVIE_SERVER_HOSTNAME'] = "https://retropaper-movie-service.apps.openshift.sevatecdemo.com"
+  ENV['DOSSIER_SERVER_HOSTNAME'] = "https://retropaper-dossier-service.apps.openshift.sevatecdemo.com"
   ENV['API'] = "api"
   ENV['VERSION'] = "v1"
   ENV['PERSON_API'] = "person"
   ENV['MOVIE_API'] = "movie"
+  ENV['DOSSIER_API'] = "dossier"
 else
   raise "Current env tier has been set to: [ #{ENV['TIER']} ], please check your env tier"
 end
 
 ENV['PERSON_API'] = "#{ENV['PERSON_SERVER_HOSTNAME']}/#{ENV['API']}/#{ENV['VERSION']}/#{ENV['PERSON_API']}"
 ENV['MOVIE_API'] = "#{ENV['MOVIE_SERVER_HOSTNAME']}/#{ENV['API']}/#{ENV['VERSION']}/#{ENV['MOVIE_API']}"
+ENV['DOSSIER_API'] = "#{ENV['DOSSIER_SERVER_HOSTNAME']}/#{ENV['API']}/#{ENV['VERSION']}/#{ENV['DOSSIER_API']}"
 
 #COMMON
 ENV['AMPERSAND'] = "&"
@@ -39,16 +42,16 @@ ENV['PARAM_PERSON_CHARACTERS'] = "characters/"
 
 #MOVIE API
 ENV['PARAM_MOVIE_ALL'] = "all"
-ENV['PARAM_MOVIE_ID'] = "id="
+ENV['PARAM_MOVIE_ID'] = ""
 ENV['PARAM_MOVIE_SEARCH'] = "search?"
 ENV['PARAM_MOVIE_TITLE'] = "title="
 ENV['PARAM_MOVIE_YEAR'] = "year="
 
 #DOSSIER API
-ENV['DOSSIER_ALL'] = "all"
-ENV['DOSSIER_CREATE_NEW'] = "dossier"
-ENV['DOSSIER_MY'] = "my"
-ENV['DOSSIER_ID'] = "id"
-ENV['DOSSIER_UPDATE'] = "update"
+ENV['PARAM_DOSSIER_ALL'] = "all"
+ENV['PARAM_DOSSIER_CREATE_NEW'] = "dossier"
+ENV['PARAM_DOSSIER_MY'] = "my"
+ENV['PARAM_DOSSIER_ID'] = ""
+ENV['PARAM_DOSSIER_UPDATE'] = "update"
 
 

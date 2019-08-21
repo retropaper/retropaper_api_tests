@@ -77,6 +77,16 @@ Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)"
         case arg4.upcase
           when "MOVIE_ALL"
             @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV["#{arg5}"]}"
+          when "MOVIE_ID"
+            @arg5 = ""
+            arg5.match(/\s/) ? @flag_pn = true : @flag_pn = false
+            p "@flag_pn: #{@flag_pn}"
+            if @flag_pn
+              @arg5 = "#{URI.encode(arg5)}"
+            else
+              @arg5 = "#{arg5}"
+            end
+            @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV['PARAM_MOVIE_ID']}#{@arg5}"
           when "BAD_REQUEST"
             @build_endpoint = "#{ENV['MOVIE_API']}/#{ENV["#{arg5}"]}"
           else
@@ -84,6 +94,33 @@ Given(/^"([^"]*)" service "([^"]*)" endpoint: "([^"]*)" is called with "([^"]*)"
         end
       else
         raise "Unable to find endpoint method. Please check your feature scenario and make sure endpoint method is correct: #{arg3}"
+    end
+
+  when "DOSSIER_API"
+    case arg3.upcase
+    when "HEALTH"
+      @build_endpoint = "#{ENV['DOSSIER_API']}/#{ENV['HEALTH']}"
+    when "DOSSIER"
+      case arg4.upcase
+      when "DOSSIER_ALL"
+        @build_endpoint = "#{ENV['DOSSIER_API']}/#{ENV["#{arg5}"]}"
+      when "DOSSIER_ID"
+        @arg5 = ""
+        arg5.match(/\s/) ? @flag_pn = true : @flag_pn = false
+        p "@flag_pn: #{@flag_pn}"
+        if @flag_pn
+          @arg5 = "#{URI.encode(arg5)}"
+        else
+          @arg5 = "#{arg5}"
+        end
+        @build_endpoint = "#{ENV['DOSSIER_API']}/#{ENV['PARAM_DOSSIER_ID']}#{@arg5}"
+      when "BAD_REQUEST"
+        @build_endpoint = "#{ENV['DOSSIER_API']}/#{ENV["#{arg5}"]}"
+      else
+        raise "Parameter: #{arg5} is incorrect. Please check your feature scenario and correct it"
+      end
+    else
+      raise "Unable to find endpoint method. Please check your feature scenario and make sure endpoint method is correct: #{arg3}"
     end
 
   else
