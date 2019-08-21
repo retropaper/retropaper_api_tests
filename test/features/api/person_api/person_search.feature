@@ -50,10 +50,15 @@ Feature: Person API: Search for person
     And the response body should not be null
     Then person ID "<id>" should match with the response person ID
     And person full Name "<fullname>" should match with the response person full name
-    And expected "person_search_by_full_name" json file parameter: "data" should match with the response
+    And response description should match with the expected "person_search_by_full_name" json file parameter: "description"
+    And the expected characters ID: "<characters_id>" and Movie ID: "<characters_movieId>" and Person ID: "<characters_personId>" and "<characters_fullName>" should match with the response
     Examples:
-      | id        | fullname   |
-      | nm0043742 | David Ayer |
+      | id        | fullname   | characters_id | characters_movieId | characters_personId | characters_fullName |
+      | nm0000226 | Will Smith | 379931        | tt1386697          | nm0000226           | Deadshot            |
+      | nm0000226 | Will Smith | 348937        | tt1409024          | nm0000226           | Agent J             |
+      | nm0000226 | Will Smith | 366413        | tt3322364          | nm0000226           | Dr. Bennet Omalu    |
+      | nm0000226 | Will Smith | 348456        | tt1815862          | nm0000226           | Cypher Raige        |
+      | nm0000226 | Will Smith | 361758        | tt2381941          | nm0000226           | Nicky               |
 
   @HIGH @ps4
   Scenario Outline: #004 SEARCH TERM <smith> should return all the available matching person ID and full name
@@ -79,7 +84,7 @@ Feature: Person API: Search for person
       | keith | nm4636194 | Markeith McCain |
       | keith | nm4552070 | Ahkeith Salley  |
 
-  @HIGH @ps6 @bug_unable_to_handle_letter_case
+  @HIGH_not_in_scope @ps6 @bug_unable_to_handle_letter_case
   Scenario Outline: #006 SEARCH TERM Letter case: "<Keith>" service GET call should be successful
     Given "GET" service "PERSON_API" endpoint: "PERSON" is called with "PERSON_SEARCH" : "<term>" parameter
     And service status code should return "200"
